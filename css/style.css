@@ -84,10 +84,6 @@ body, select, input, textarea {
   /* font-family: Georgia, serif;  */
 }
 
-/* headers (h1,h2,etc) have no default font-size or margin,
-   you'll want to define those yourself. */
-h1,h2,h3,h4,h5,h6 { font-weight: bold; }
-
 /* always force a scrollbar in non-IE: */
 html { overflow-y: scroll; }
 
@@ -191,7 +187,6 @@ html, body {
 }
 
 #positioner {
-  background: hsla( 0, 100%, 50%, 0.3 );
   height: 50%;
   position: relative;
   width: 100%;
@@ -200,7 +195,7 @@ html, body {
 #container {
   position: relative;
   
-  width: 960px;
+  width: 990px;
   height: 540px;
   top: -270px;
   border: 1px solid;
@@ -208,8 +203,174 @@ html, body {
   
 }
 
+/**** Grid ****/
+
+#grid {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  display: none;
+}
 
 
+#grid > div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#grid .vertical div {
+  width: 109px;
+  height: 100%;
+  border-right: 1px solid hsla( 0, 0%, 0%, 0.15 );
+  float: left;
+}
+
+#grid .horizontal div {
+  height: 59px;
+  border-bottom: 1px solid hsla( 0, 0%, 0%, 0.15 );
+}
+
+#grid .mask {
+  width: 330px;
+  height: 180px;
+  background: hsla( 0, 100%, 50%, 0.1 );
+  left: 330px;
+  top: 300px;
+}
+
+/**** Base ****/
+
+body {
+  background: #DD0;
+  font-family: 'Hero Light';
+}
+
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/***************** Intro *****************/
+
+#intro {
+  color: #223;
+}
+
+#intro h1 {
+  font-family: 'Mod';
+  font-size: 180px;
+  text-align: center;
+  line-height: 160px;
+}
+
+#intro h2 {
+  font-family: 'Mod';
+  font-size: 130px;
+  text-align: center;
+  line-height: 0.8em;
+}
+
+#intro .date,
+#intro .location {
+  position: absolute;
+  width: 330px;
+  top: 300px;
+}
+
+/* Date */
+
+#intro .date time {
+  display: block;
+  text-align: center;
+}
+
+#intro .date .day-of-week {
+  text-transform: uppercase;
+  font-size: 76px;
+  line-height: 0.9em;
+}
+
+#intro .date .day {
+  font-size: 64px;
+  text-transform: uppercase;
+  font-family: 'Hero';
+  line-height: 1.0em;
+}
+
+#intro .date .day i {
+  font-style: normal;
+  background: #223;
+  font-size: 0.9em;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: top;
+  display: inline-block;
+  color: #DD0;
+  text-align: center;
+  line-height: 1.3em;
+  position: relative;
+  top: -0.15em;
+  -webkit-border-radius: 0.6em;
+     -moz-border-radius: 0.6em;
+          border-radius: 0.6em;
+
+}
+
+#intro .date .year {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 0.8em;
+  letter-spacing: 0.5em;
+  word-spacing: 0.3em;
+  font-family: 'Hero';
+}
+
+#intro .date .time {
+  font-size: 32px;
+  line-height: 1.6em;
+  letter-spacing: 0.05em;
+  font-family: 'Hero';
+}
+
+/* Location */
+
+#intro .location {
+  right: 0;
+}
+
+#intro .location h3 {
+  font-family: 'Mod';
+  font-size: 104px;
+  line-height: 0.9em;
+}
+
+#intro .location a * {
+  display: block;
+  text-align: center;
+}
+
+#intro .location a p {
+  background: white;
+  color: #223;
+  width: 96%;
+  margin: 0 auto;
+  color: #DD0;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  line-height: 1.0em;
+  padding-top: 0.15em;
+}
+
+#intro .location a p.city {
+  font-size: 54px;
+}
+
+#intro .location a:hover h3 { color: #B20; }
+#intro .location a:hover p { background: #B20; }
 
 
 
