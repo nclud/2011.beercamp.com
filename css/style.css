@@ -192,25 +192,28 @@ html, body {
   width: 100%;
 }
 
-#container {
+#container,
+#grid {
   position: relative;
   
   width: 990px;
   height: 540px;
   top: -270px;
-  border: 1px solid hsla( 0, 0%, 0%, 0.1 );
   margin: 0 auto;
   
+}
+
+#container {
+  top: -810px;
 }
 
 /**** Grid ****/
 
 #grid {
-  position: absolute;
-  height: 100%;
-  width: 100%;
   pointer-events: none;
-  display: none;
+  border: 1px solid hsla( 0, 0%, 0%, 0.1 );
+/*  background: hsla( 240, 100%, 50%, 0.3 );*/
+/*  display: none;*/
 }
 
 
@@ -245,6 +248,7 @@ html, body {
 body {
   background: #DD0;
   font-family: 'Hero Light';
+  color: #223;
 }
 
 a,
@@ -255,6 +259,87 @@ a:visited {
 
 a:hover {
   color: #B20;
+}
+
+#container section h1 {
+  font-family: 'Mod';
+  font-size: 100px;
+  text-align: center;
+}
+
+/***************** Faux 3d  *****************/
+
+.csstransforms #container section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.csstransforms #container section,
+.csstransforms #container {
+  -webkit-transform-origin: center 450px;
+     -moz-transform-origin: center 450px;
+      -ms-transform-origin: center 450px;
+       -o-transform-origin: center 450px;
+          transform-origin: center 450px;
+  
+}
+
+
+.csstransforms #container {
+  -webkit-transition: -webkit-transform 1s;
+     -moz-transition:    -moz-transform 1s;
+       -o-transition:      -o-transform 1s;
+          transition:         transform 1s;
+}
+
+.csstransforms #sponsors {
+  -webkit-transform: scale(0.3333);
+     -moz-transform: scale(0.3333);
+      -ms-transform: scale(0.3333);
+       -o-transform: scale(0.3333);
+          transform: scale(0.3333);
+}
+
+.csstransforms .sponsors #container {
+  -webkit-transform: scale(3);
+     -moz-transform: scale(3);
+      -ms-transform: scale(3);
+       -o-transform: scale(3);
+          transform: scale(3);
+}
+
+.csstransforms #flip-cup {
+  -webkit-transform: scale(0.1111);
+     -moz-transform: scale(0.1111);
+      -ms-transform: scale(0.1111);
+       -o-transform: scale(0.1111);
+          transform: scale(0.1111);
+}
+
+.csstransforms .flip-cup #container {
+  -webkit-transform: scale(9);
+     -moz-transform: scale(9);
+      -ms-transform: scale(9);
+       -o-transform: scale(9);
+          transform: scale(9);
+}
+
+
+.csstransforms #sign-up {
+  -webkit-transform: scale(0.037);
+     -moz-transform: scale(0.037);
+      -ms-transform: scale(0.037);
+       -o-transform: scale(0.037);
+          transform: scale(0.037);
+}
+
+.csstransforms .sign-up #container {
+  -webkit-transform: scale(27);
+     -moz-transform: scale(27);
+      -ms-transform: scale(27);
+       -o-transform: scale(27);
+          transform: scale(27);
 }
 
 /***************** Nav  *****************/
@@ -302,7 +387,11 @@ a:hover {
   color: #223;
 }
 
-#intro .nav li.intro a
+#intro .nav li.intro a,
+#sponsors .nav li.sponsors a,
+#flip-cup .nav li.flip-cup a,
+#sign-up .nav li.sign-up a,
+#teams .nav li.teams a
 {
   background: #B20;
 }
@@ -310,10 +399,9 @@ a:hover {
 /***************** Intro *****************/
 
 #intro {
-  color: #223;
 }
 
-#intro h1 {
+#container #intro h1 {
   font-family: 'Mod';
   font-size: 180px;
   text-align: center;
@@ -435,8 +523,8 @@ a:hover {
   font-family: 'Mod';
   width: 100%;
   font-size: 47px;
-  color: #DD0;
-  text-shadow:
+  color: #223;
+/*  text-shadow:
    2px  0px #223,
    2px  2px #223,
    0px  2px #223,
@@ -445,8 +533,16 @@ a:hover {
   -2px -2px #223,
    0px -2px #223,
    2px -2px #223
-  ;
+  ;*/
   letter-spacing: 2px;
+}
+
+/***************** Sponsors  *****************/
+
+#container #sponsors h1 {
+  font-size: 180px;
+  line-height: 0.8em;
+  margin-top: 18px;
 }
 
 
