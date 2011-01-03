@@ -212,6 +212,7 @@ html, body {
 #grid {
   pointer-events: none;
   border: 1px solid hsla( 0, 0%, 0%, 0.1 );
+  opacity: 0;
 /*  background: hsla( 240, 100%, 50%, 0.3 );*/
 /*  display: none;*/
 }
@@ -540,10 +541,53 @@ a:hover {
 /***************** Sponsors  *****************/
 
 #container #sponsors h1 {
-  font-size: 180px;
+  font-size: 120px;
   line-height: 0.8em;
   margin-top: 18px;
 }
+
+#sponsors .blurb {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+}
+
+#sponsors .blurb a {
+  background: white;
+  color: #DD0;
+  padding: 0.1em 0.3em;
+  font-family: 'Hero';
+}
+
+#sponsors .sponsor-list {
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  top: 120px;
+}
+
+#sponsors .sponsor-list li {
+  position: absolute;
+  width: 310px;
+  height: 100px;
+  background: white;
+  margin: 10px;
+}
+
+#sponsors .sponsor-list li.n2 { left: 330px; }
+#sponsors .sponsor-list li.n3,
+#sponsors .sponsor-list li.n5,
+#sponsors .sponsor-list li.n7 { left: 660px; }
+#sponsors .sponsor-list li.n4,
+#sponsors .sponsor-list li.n5 { top: 120px; }
+#sponsors .sponsor-list li.n6,
+#sponsors .sponsor-list li.n7 { top: 240px; }
+
+
+
 
 
  /*
