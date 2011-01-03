@@ -140,8 +140,8 @@ input:invalid, textarea:invalid {
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
 
-/*::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
-::selection { background:#FF5E99; color:#fff; text-shadow: none; }*/
+/*::-moz-selection { background: #223; color: #DD0; text-shadow: none; }
+::selection      { background: #223; color: #DD0; text-shadow: none; opacity: 1; }*/
 
 /* make buttons play nice in IE:
    www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
@@ -198,7 +198,7 @@ html, body {
   width: 990px;
   height: 540px;
   top: -270px;
-  border: 1px solid;
+  border: 1px solid hsla( 0, 0%, 0%, 0.1 );
   margin: 0 auto;
   
 }
@@ -253,6 +253,60 @@ a:visited {
   text-decoration: none;
 }
 
+a:hover {
+  color: #B20;
+}
+
+/***************** Nav  *****************/
+
+.nav {
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+/*  background: #223;*/
+}
+
+.nav li {
+  float: left;
+  border-right: 2px solid #DD0;
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+/*  font-family: 'Hero';*/
+}
+
+.nav li a {
+  line-height: 1.4em;
+  display: block;
+  background: #223;
+  color: #DD0;
+  letter-spacing: 0.2em;
+/*  text-shadow:
+   1px  0px #DD0,
+   1px  1px #DD0,
+   0px  1px #DD0,
+  -1px  1px #DD0,
+  -1px  0px #DD0,
+  -1px -1px #DD0,
+   0px -1px #DD0,
+   1px -1px #DD0
+  ;*/
+  padding: 0.1em 2.0em 0 0.5em;
+}
+
+.nav li a:hover {
+  background: white;
+  color: #223;
+}
+
+#intro .nav li.intro a
+{
+  background: #B20;
+}
+
 /***************** Intro *****************/
 
 #intro {
@@ -264,6 +318,7 @@ a:visited {
   font-size: 180px;
   text-align: center;
   line-height: 160px;
+  margin-top: 10px;
 }
 
 #intro h2 {
@@ -277,7 +332,7 @@ a:visited {
 #intro .location {
   position: absolute;
   width: 330px;
-  top: 300px;
+  top: 296px;
 }
 
 /* Date */
@@ -332,13 +387,13 @@ a:visited {
   font-size: 32px;
   line-height: 1.6em;
   letter-spacing: 0.05em;
-  font-family: 'Hero';
 }
 
 /* Location */
 
 #intro .location {
   right: 0;
+  top: 284px;
 }
 
 #intro .location h3 {
@@ -373,7 +428,26 @@ a:visited {
 #intro .location a:hover p { background: #B20; }
 
 
-
+#intro .blurb {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-family: 'Mod';
+  width: 100%;
+  font-size: 47px;
+  color: #DD0;
+  text-shadow:
+   2px  0px #223,
+   2px  2px #223,
+   0px  2px #223,
+  -2px  2px #223,
+  -2px  0px #223,
+  -2px -2px #223,
+   0px -2px #223,
+   2px -2px #223
+  ;
+  letter-spacing: 2px;
+}
 
 
  /*
