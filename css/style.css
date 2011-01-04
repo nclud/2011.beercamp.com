@@ -222,30 +222,34 @@ html, body {
 }
 
 #wrap {
-  position: fixed;
   height: 100%;
   width: 100%;
+  position: fixed;
 }
 
-#positioner {
+#offset {
   height: 50%;
-  position: relative;
   width: 100%;
 }
 
-#container,
-#grid {
+#container {
   position: relative;
-  
   width: 990px;
   height: 540px;
   top: -270px;
   margin: 0 auto;
+/*  background: hsla( 0, 100%, 50%, 0.3 );*/
+}
+
+#content,
+#grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   
 }
 
-#container {
-  top: -810px;
+#content {
 }
 
 /**** Grid ****/
@@ -253,7 +257,6 @@ html, body {
 #grid {
   pointer-events: none;
   border: 1px solid hsla( 0, 0%, 0%, 0.1 );
-  opacity: 1;
 /*  background: hsla( 240, 100%, 50%, 0.3 );*/
 /*  display: none;*/
 }
@@ -303,7 +306,7 @@ a:hover {
   color: #B20;
 }
 
-#container section h1 {
+#content section h1 {
   font-family: 'MOD';
   font-size: 100px;
   text-align: center;
@@ -312,14 +315,14 @@ a:hover {
 
 /***************** Faux 3d  *****************/
 
-.csstransforms #container section {
+.csstransforms #content section {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-.csstransforms #container section,
-.csstransforms #container {
+.csstransforms #content section,
+.csstransforms #content {
   -webkit-transform-origin: center 450px;
      -moz-transform-origin: center 450px;
       -ms-transform-origin: center 450px;
@@ -329,7 +332,7 @@ a:hover {
 }
 
 
-.csstransforms #container {
+.csstransforms #content {
   -webkit-transition: -webkit-transform 1s;
      -moz-transition:    -moz-transform 1s;
        -o-transition:      -o-transform 1s;
@@ -344,7 +347,7 @@ a:hover {
           transform: scale(0.3333);
 }
 
-.csstransforms .featuring #container {
+.csstransforms .featuring #content {
   -webkit-transform: scale(3);
      -moz-transform: scale(3);
       -ms-transform: scale(3);
@@ -360,7 +363,7 @@ a:hover {
           transform: scale(0.1111);
 }
 
-.csstransforms .sponsors #container {
+.csstransforms .sponsors #content {
   -webkit-transform: scale(9);
      -moz-transform: scale(9);
       -ms-transform: scale(9);
@@ -377,7 +380,7 @@ a:hover {
           transform: scale(0.037);
 }
 
-.csstransforms .flip-cup #container {
+.csstransforms .flip-cup #content {
   -webkit-transform: scale(27);
      -moz-transform: scale(27);
       -ms-transform: scale(27);
@@ -393,7 +396,7 @@ a:hover {
           transform: scale(0.0123);
 }
 
-.csstransforms .sign-up #container {
+.csstransforms .sign-up #content {
   -webkit-transform: scale(81);
      -moz-transform: scale(81);
       -ms-transform: scale(81);
@@ -415,19 +418,19 @@ a:hover {
 
 .nav li {
   float: left;
-  border-right: 2px solid #DD0;
+  margin-right: 2px;
   text-align: center;
   font-size: 15px;
   text-transform: uppercase;
-  font-family: 'Hero';
+/*  font-family: 'Hero';*/
+  letter-spacing: 0.15em;
+  line-height: 1.4em;
 }
 
 .nav li a {
-  line-height: 1.4em;
   display: block;
   background: #223;
   color: #DD0;
-  letter-spacing: 0.2em;
 /*  text-shadow:
    1px  0px #DD0,
    1px  1px #DD0,
@@ -456,12 +459,15 @@ a:hover {
   background: #B20;
 }
 
+#content .nav { display: none; }
+/*#container > .nav { display: none; }*/
+
 /***************** Intro *****************/
 
 #intro {
 }
 
-#container #intro h1 {
+#content #intro h1 {
   font-family: 'MOD';
   font-size: 176px;
   text-align: center;
@@ -603,7 +609,7 @@ a:hover {
 
 /***************** Featuring *****************/
 
-#container #featuring h1 {
+#content #featuring h1 {
   margin-top: 24px;
   font-size: 161px;
   line-height: 0.9em;
@@ -633,7 +639,7 @@ a:hover {
   margin: 0 10px;
   position: absolute;
   top: 170px;
-  height: 305px;
+  height: 360px;
   border-bottom: 10px solid;
 }
 
@@ -648,7 +654,8 @@ a:hover {
   font-family: 'MOD';
   border-top: 10px solid;
   border-bottom: 10px solid;
-  font-size: 50px;
+  font-size: 88px;
+  line-height: 0.9em;
 }
 
 #featuring .beverages h2 {
@@ -659,15 +666,15 @@ a:hover {
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.6em;
-  line-height: 1.6em;
-  padding-top: 0.2em;
+  line-height: 2.0em;
+  padding-top: 0.4em;
 }
 
 #featuring .feature p strong span {
   font-weight: normal;
   font-size: 58px;
   text-transform: uppercase;
-  line-height: 0.95em;
+  line-height: 1.1em;
 }
 
 #featuring .feature p strong span.victory { font-size: 72px; }
@@ -680,7 +687,7 @@ a:hover {
 
 /***************** Sponsors  *****************/
 
-#container #sponsors h1 {
+#content #sponsors h1 {
   font-size: 120px;
   line-height: 0.8em;
   margin-top: 18px;
@@ -755,7 +762,7 @@ a:hover {
 
 /***************** Flip Cup  *****************/
 
-#container #flip-cup h1 {
+#content #flip-cup h1 {
   font-size: 146px;
 }
 

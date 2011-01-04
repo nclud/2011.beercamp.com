@@ -25,129 +25,140 @@ layout: nil
 
 <div id="wrap">
 
-  <div id="positioner"></div> <!-- #positioner -->
-
-  <section id="grid">
-    <div class="horizontal">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="vertical">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="mask"></div>
-  </section> <!-- #grid -->
-
+  <div id="offset"></div> <!-- #offset -->
+  
   <div id="container">
     
-    <section id="intro">
-      {% include nav.html %}
-      
-      <h1>BeerCamp</h1>
-      <h2>at SXSW 2011</h2>
-      
-      <div class="date">
-        <time class="day-of-week">Monday</time> 
-        <time class="day">March <i>14</i></time> 
-        <time class="year">Twenty Eleven</time> 
-        <time class="time">Starting at 7:30 PM</time>
+    <section id="grid">
+      <div class="horizontal">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      
-      <div class="location"> 
-        <a href="http://maps.google.com/maps?q=Emo%27s+Austin+TX&ie=UTF8&hq=Emo%27s&hnear=Austin,+TX&z=16&iwloc=A"> 
-          <h3>Emo&rsquo;s</h3> 
-          <p class="street">603 Red River St.</p> 
-          <p class="city">Austin, TX</p>
-        </a> 
+      <div class="vertical">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      
-      <p class="blurb">A party of rational proportions</p>
-      
-    </section> <!-- #intro -->
+      <div class="mask"></div>
+    </section> <!-- #grid -->
     
-    <section id="featuring">
-      {% include nav.html %}
-      <h1>Featuring</h1>
-
-      <div class="feature beverages">
-        <h2>Beverages</h2>
-        <p>
-          <span class="provided">provided by</span>
-          <strong>
-            <span class="victory">Victory</span>
-            <span class="brewing">Brewing</span>
-            <span class="company">Company</span>
-          </strong>
-        </p>
-      </div>
-
-      <div class="feature music">
-        <h2>Music</h2>
-        <p>
-          <span class="provided">provided by</span>
-          <strong>
-            <span class="">Awesome</span>
-            <span class="">Music</span>
-            <span class="">Act</span>
-          </strong>
-        </p>
-      </div>
-
-      <!-- <p class="beverages">
-        
-        The exceptional beer of <strong><span class="">Victory</span> Brewing Company</strong></p>
-      <p class="music"><strong>Awesome Music act</strong> rocking the jams</p> -->
-
-    </section> <!-- #featuring -->
     
-    <section id="sponsors">
-      {% include nav.html %}
-      <h1>Sponsored By:</h1>
-      
-      <ul class="sponsor-list">
-        <li class="n1"></li>
-        <li class="n2"></li>
-        <li class="n3"></li>
-        <li class="n4"></li>
-        <li class="n5"></li>
-        <li class="n6"></li>
-        <li class="n7"></li>
-      </ul>
-      
-      <p class="fontfabric"><a href="http://fontfabric.com/">Fonts by <b>Fontfabric</b></a></p>
-      
-      <p class="blurb">
-        Help make BeerCamp happen. Become a sponsor! Email us at <a href="mailto:events@nclud.com">events@nclud.com</a>
-      </p>
-    </section> <!-- #sponsors -->
+    {% include nav.html %}
+    
+    <div id="content">
 
-    <section id="flip-cup">
-      {% include nav.html %}
-      <h1>Flip Cup <span class="tournament"><span class="tourn">Tourn</span><span class="ament">ament</span></span></h1>
-    </section> <!-- #flip-cup -->
+      <section id="intro">
 
-    <section id="sign-up">
-      {% include nav.html %}
-      <h1>Sign up your team</h1>
-    </section> <!-- #flip-cup -->
+        <h1>BeerCamp</h1>
+        <h2>at SXSW 2011</h2>
+
+        <div class="date">
+          <time class="day-of-week">Monday</time> 
+          <time class="day">March <i>14</i></time> 
+          <time class="year">Twenty Eleven</time> 
+          <time class="time">Starting at 7:30 PM</time>
+        </div>
+
+        <div class="location"> 
+          <a href="http://maps.google.com/maps?q=Emo%27s+Austin+TX&ie=UTF8&hq=Emo%27s&hnear=Austin,+TX&z=16&iwloc=A"> 
+            <h3>Emo&rsquo;s</h3> 
+            <p class="street">603 Red River St.</p> 
+            <p class="city">Austin, TX</p>
+          </a> 
+        </div>
+
+        <p class="blurb">A party of rational proportions</p>
+
+      </section> <!-- #intro -->
+
+      <section id="featuring">
+
+        <h1>Featuring</h1>
+
+        <div class="feature beverages">
+          <h2>Beer</h2>
+          <p>
+            <span class="provided">provided by</span>
+            <strong>
+              <span class="victory">Victory</span>
+              <span class="brewing">Brewing</span>
+              <span class="company">Company</span>
+            </strong>
+          </p>
+        </div>
+
+        <div class="feature music">
+          <h2>Music</h2>
+          <p>
+            <span class="provided">provided by</span>
+            <strong>
+              <span class="">Awesome</span>
+              <span class="">Music</span>
+              <span class="">Act</span>
+            </strong>
+          </p>
+        </div>
+
+        <!-- <p class="beverages">
+
+          The exceptional beer of <strong><span class="">Victory</span> Brewing Company</strong></p>
+        <p class="music"><strong>Awesome Music act</strong> rocking the jams</p> -->
+
+      </section> <!-- #featuring -->
+
+      <section id="sponsors">
+
+        <h1>Sponsored By:</h1>
+
+        <ul class="sponsor-list">
+          <li class="n1"></li>
+          <li class="n2"></li>
+          <li class="n3"></li>
+          <li class="n4"></li>
+          <li class="n5"></li>
+          <li class="n6"></li>
+          <li class="n7"></li>
+        </ul>
+
+        <p class="fontfabric"><a href="http://fontfabric.com/">Fonts by <b>Fontfabric</b></a></p>
+
+        <p class="blurb">
+          Help make BeerCamp happen. Become a sponsor! Email us at <a href="mailto:events@nclud.com">events@nclud.com</a>
+        </p>
+      </section> <!-- #sponsors -->
+
+      <section id="flip-cup">
+
+        <h1>Flip Cup <span class="tournament"><span class="tourn">Tourn</span><span class="ament">ament</span></span></h1>
+      </section> <!-- #flip-cup -->
+
+      <section id="sign-up">
+        <h1>Sign up your team</h1>
+      </section> <!-- #flip-cup -->
 
 
+    </div> <!-- #container -->
+  
+  
   </div> <!-- #container -->
+  
+
+
+
+
   
 </div> <!-- #wrap -->
 
