@@ -253,7 +253,7 @@ html, body {
 #grid {
   pointer-events: none;
   border: 1px solid hsla( 0, 0%, 0%, 0.1 );
-  opacity: 0;
+  opacity: 1;
 /*  background: hsla( 240, 100%, 50%, 0.3 );*/
 /*  display: none;*/
 }
@@ -307,6 +307,7 @@ a:hover {
   font-family: 'MOD';
   font-size: 100px;
   text-align: center;
+  font-weight: normal;
 }
 
 /***************** Faux 3d  *****************/
@@ -402,7 +403,7 @@ a:hover {
   text-align: center;
   font-size: 15px;
   text-transform: uppercase;
-/*  font-family: 'Hero';*/
+  font-family: 'Hero';
 }
 
 .nav li a {
@@ -445,24 +446,28 @@ a:hover {
 
 #container #intro h1 {
   font-family: 'MOD';
-  font-size: 180px;
+  font-size: 176px;
   text-align: center;
   line-height: 160px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 #intro h2 {
   font-family: 'MOD';
-  font-size: 130px;
+  font-size: 128px;
   text-align: center;
   line-height: 0.8em;
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  white-space: pre;
 }
 
 #intro .date,
 #intro .location {
   position: absolute;
   width: 330px;
-  top: 296px;
+  top: 285px;
 }
 
 /* Date */
@@ -523,7 +528,7 @@ a:hover {
 
 #intro .location {
   right: 0;
-  top: 284px;
+  top: 280px;
 }
 
 #intro .location h3 {
@@ -565,8 +570,8 @@ a:hover {
   font-family: 'Mod';
   width: 100%;
   font-size: 47px;
-  color: #223;
-/*  text-shadow:
+  color: #DD0;
+  text-shadow:
    2px  0px #223,
    2px  2px #223,
    0px  2px #223,
@@ -575,8 +580,8 @@ a:hover {
   -2px -2px #223,
    0px -2px #223,
    2px -2px #223
-  ;*/
-  letter-spacing: 2px;
+  ;
+  letter-spacing: 1px;
 }
 
 /***************** Sponsors  *****************/
@@ -628,8 +633,47 @@ a:hover {
 #sponsors .sponsor-list li.n7 { top: 240px; }
 
 
+#sponsors .fontfabric {
+  width: 310px;
+  height: 40px;
+  margin: 10px;
+  left: 330px;
+  position: absolute;
+  top: 240px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 21px;
+  text-transform: uppercase;
+}
 
+#sponsors .fontfabric b { 
+  font-family: 'Hero';
+  font-weight: normal;
+  font-size: 26px;
+  text-transform: none;
+}
 
+#sponsors .fontfabric a {
+  display: block;
+  background: #223;
+  color: #DD0;
+}
+
+/***************** Flip Cup  *****************/
+
+#container #flip-cup h1 {
+  font-size: 146px;
+}
+
+#flip-cup h1 .tournament {
+  display: inline-block;
+  font-size: 69px;
+  line-height: 0.8em;
+}
+
+#flip-cup h1 .tournament span {
+  display: block;
+}
 
  /*
   * print styles
