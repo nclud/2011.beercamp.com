@@ -332,13 +332,13 @@ a:hover {
 }
 
 
-.csstransforms #content {
+/*.csstransforms #content {
   -webkit-transition: -webkit-transform 1s;
      -moz-transition:    -moz-transform 1s;
        -o-transition:      -o-transform 1s;
           transition:         transform 1s;
 }
-
+*/
 /***************** Faux 3d  *****************/
 
 .faux3d #featuring {
@@ -885,6 +885,15 @@ a:hover {
 
 #flip-cup h1 .tournament span {
   display: block;
+}
+
+
+
+/***************** Scroll Proxy  *****************/
+
+
+#scroll-proxy {
+  height: 5400px;
 }
 
  /*
