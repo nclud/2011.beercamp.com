@@ -258,7 +258,7 @@ html, body {
   pointer-events: none;
   border: 1px solid hsla( 0, 0%, 0%, 0.1 );
 /*  background: hsla( 240, 100%, 50%, 0.3 );*/
-/*  display: none;*/
+  display: none;
 }
 
 
@@ -454,7 +454,13 @@ a:hover {
 #sponsors .nav li.sponsors a,
 #flip-cup .nav li.flip-cup a,
 #sign-up .nav li.sign-up a,
-#teams .nav li.teams a
+#teams .nav li.teams a,
+.intro .nav li.intro a,
+.featuring .nav li.featuring a,
+.sponsors .nav li.sponsors a,
+.flip-cup .nav li.flip-cup a,
+.sign-up .nav li.sign-up a,
+.teams .nav li.teams a
 {
   background: #B20;
 }
@@ -685,12 +691,61 @@ a:hover {
   right: 0;
 }
 
+#featuring .links {
+  position: absolute;
+  bottom: 0px;
+  width: 310px;
+  left: 330px;
+  margin: 0 10px;
+  background: white;
+  height: 50px;
+}
+
+#featuring .links p {
+  height: 24px;
+  line-height: 24px;
+  font-family: 'Hero';
+  font-size: 21px;
+  background: white;
+  text-align: center;
+}
+
+#featuring .links p a {
+  display: block;
+  color: #DD0;
+}
+
+#featuring .links p a:hover {
+  background: #B20;
+}
+
+#featuring .links p.twitter {
+  border-bottom: 3px solid #DD0;
+  
+}
+
+#featuring .blurb {
+  width: 310px;
+  position: absolute;
+  margin: 0 10px;
+  left: 330px;
+  top: 170px;
+  line-height: 1.4em;
+  text-align: justify;
+  font-size: 16px;
+}
+
+
+
+
+
+
 /***************** Sponsors  *****************/
 
 #content #sponsors h1 {
   font-size: 120px;
   line-height: 0.8em;
-  margin-top: 18px;
+  margin-top: 27px;
 }
 
 #sponsors .blurb {
@@ -702,12 +757,23 @@ a:hover {
   text-align: center;
 }
 
+#sponsors .blurb strong {
+  font-weight: normal;
+  font-family: 'Hero';
+}
+
 #sponsors .blurb a {
   background: white;
   color: #DD0;
   padding: 0.1em 0.3em;
   font-family: 'Hero';
 }
+
+#sponsors .blurb a:hover {
+  background: #B20;
+}
+
+/* Sponsor list */
 
 #sponsors .sponsor-list {
   list-style: none;
@@ -759,6 +825,8 @@ a:hover {
   background: #223;
   color: #DD0;
 }
+
+
 
 /***************** Flip Cup  *****************/
 
