@@ -336,7 +336,7 @@ a:hover {
           transition:         transform 1s;
 }
 
-.csstransforms #sponsors {
+.csstransforms #featuring {
   -webkit-transform: scale(0.3333);
      -moz-transform: scale(0.3333);
       -ms-transform: scale(0.3333);
@@ -344,7 +344,7 @@ a:hover {
           transform: scale(0.3333);
 }
 
-.csstransforms .sponsors #container {
+.csstransforms .featuring #container {
   -webkit-transform: scale(3);
      -moz-transform: scale(3);
       -ms-transform: scale(3);
@@ -352,7 +352,7 @@ a:hover {
           transform: scale(3);
 }
 
-.csstransforms #flip-cup {
+.csstransforms #sponsors {
   -webkit-transform: scale(0.1111);
      -moz-transform: scale(0.1111);
       -ms-transform: scale(0.1111);
@@ -360,7 +360,7 @@ a:hover {
           transform: scale(0.1111);
 }
 
-.csstransforms .flip-cup #container {
+.csstransforms .sponsors #container {
   -webkit-transform: scale(9);
      -moz-transform: scale(9);
       -ms-transform: scale(9);
@@ -369,7 +369,7 @@ a:hover {
 }
 
 
-.csstransforms #sign-up {
+.csstransforms #flip-cup {
   -webkit-transform: scale(0.037);
      -moz-transform: scale(0.037);
       -ms-transform: scale(0.037);
@@ -377,12 +377,28 @@ a:hover {
           transform: scale(0.037);
 }
 
-.csstransforms .sign-up #container {
+.csstransforms .flip-cup #container {
   -webkit-transform: scale(27);
      -moz-transform: scale(27);
       -ms-transform: scale(27);
        -o-transform: scale(27);
           transform: scale(27);
+}
+
+.csstransforms #sign-up {
+  -webkit-transform: scale(0.0123);
+     -moz-transform: scale(0.0123);
+      -ms-transform: scale(0.0123);
+       -o-transform: scale(0.0123);
+          transform: scale(0.0123);
+}
+
+.csstransforms .sign-up #container {
+  -webkit-transform: scale(81);
+     -moz-transform: scale(81);
+      -ms-transform: scale(81);
+       -o-transform: scale(81);
+          transform: scale(81);
 }
 
 /***************** Nav  *****************/
@@ -431,6 +447,7 @@ a:hover {
 }
 
 #intro .nav li.intro a,
+#featuring .nav li.featuring a,
 #sponsors .nav li.sponsors a,
 #flip-cup .nav li.flip-cup a,
 #sign-up .nav li.sign-up a,
@@ -582,6 +599,83 @@ a:hover {
    2px -2px #223
   ;
   letter-spacing: 1px;
+}
+
+/***************** Featuring *****************/
+
+#container #featuring h1 {
+  margin-top: 24px;
+  font-size: 161px;
+  line-height: 0.9em;
+}
+
+/*#featuring .victory,
+#featuring .music {
+  border-top: 6px solid;
+  font-size: 32px;
+  line-height: 1.6em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#featuring .music {
+  border-bottom: 6px solid;
+}
+
+#featuring .victory strong,
+#featuring .music strong {
+  font-family: 'Hero';
+  font-weight: normal;
+}*/
+
+#featuring .feature {
+  width: 310px;
+  margin: 0 10px;
+  position: absolute;
+  top: 170px;
+  height: 305px;
+  border-bottom: 10px solid;
+}
+
+#featuring .feature h2,
+#featuring .feature span {
+  display: block;
+  text-align: center;
+}
+
+#featuring .feature h2 {
+  font-weight: normal;
+  font-family: 'MOD';
+  border-top: 10px solid;
+  border-bottom: 10px solid;
+  font-size: 50px;
+}
+
+#featuring .beverages h2 {
+}
+
+#featuring .provided {
+  font-family: 'Hero';
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 0.6em;
+  line-height: 1.6em;
+  padding-top: 0.2em;
+}
+
+#featuring .feature p strong span {
+  font-weight: normal;
+  font-size: 58px;
+  text-transform: uppercase;
+  line-height: 0.95em;
+}
+
+#featuring .feature p strong span.victory { font-size: 72px; }
+#featuring .feature p strong span.brewing { font-size: 63px; }
+#featuring .feature p strong span.company { font-size: 62px; }
+
+#featuring .music {
+  right: 0;
 }
 
 /***************** Sponsors  *****************/
