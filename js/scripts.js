@@ -1,4 +1,5 @@
 // BeerCamp '11 Global constructor
+// don't necessarily need the constructor, but I like using the 'this' keyword
 var Beercamper = function() {
   this.scrolled = 0;
   this.levels = 5;
@@ -10,10 +11,9 @@ var Beercamper = function() {
   this.getScrollTransform = Modernizr.csstransforms3d ? 
     this.getScroll3DTransform : this.getScroll2DTransform;
   
-  
-  window.addEventListener( 'scroll', this, false);
-  
-  // console.log( this )
+  if ( Modernizr.csstransforms ) {
+    window.addEventListener( 'scroll', this, false);
+  }
   
 };
 
@@ -23,8 +23,8 @@ Beercamper.prototype.handleEvent = function( event ) {
   }
 };
 
-Beercamper.prototype.getScroll2DTransform = function() {
-  var scale = Math.pow( 3, this.scrolled * (this.levels - 1) );
+Beercamper.prototype.getScroll2DTransform = function( scroll ) {
+  var scale = Math.pow( 3, scroll * (this.levels - 1) );
       prop = 'scale(' + scale + ')',
       style = {
         WebkitTransform : prop,
@@ -35,67 +35,76 @@ Beercamper.prototype.getScroll2DTransform = function() {
   return style;
 };
 
-Beercamper.prototype.getScroll3DTransform = function() {
+Beercamper.prototype.getScroll3DTransform = function( scroll ) {
   var style = {
-    WebkitTransform : 'translate3d( 0, 0, ' + (this.scrolled * (this.levels - 1) * this.distance3d ) + 'px )'
+    WebkitTransform : 'translate3d( 0, 0, ' + ( scroll * (this.levels - 1) * this.distance3d ) + 'px )'
   };
   return style;
 };
 
 Beercamper.prototype.scroll = function( event ) {
   this.getScroll();
-  
-  this.$content.css( this.getScrollTransform() )
-  
+  this.transformScroll( this.scrolled );
+};
+
+Beercamper.prototype.transformScroll = function( scroll ) {
+  // console.log('transform scroll ', scroll )
+  this.$content.css( this.getScrollTransform( scroll ) );
 };
 
 Beercamper.prototype.getScroll = function() {
 
-  // console.log( this )
-
-  this.scrolled = this.$window.scrollTop() / ( $(document).height() - $(window).height() ); 
-
-  // console.log( this.scrolled );
+  this.scrolled = this.$window.scrollTop() / ( this.$document.height() - this.$window.height() ); 
   
 };
 
-Beercamper.prototype.jQueryReady = function() {
+// handle click events
+Beercamper.prototype.click = function( event ) {
 
+  //  nav click event
+  var targetLevel = $(event.target).parent().index(),
+      scroll = targetLevel / (this.levels-1);
 
+  this.$window.scrollTop( scroll * ( this.$document.height() - this.$window.height() ) );
+
+  event.preventDefault();
   
-  // console.log( this.$window.scrollTop() )
-
 };
 
-if ( Modernizr.csstransforms ) {
-  // BeerCamp '11 Global object
-  var BCXI = new Beercamper();
-  
-}
+
+
+// BeerCamp '11 Global object
+var BCXI = new Beercamper();
+
 
 
 $(function(){
   
-  if ( BCXI ) {
-    
-    BCXI.$content = $('#content');
+  BCXI.$content = $('#content');
 
+
+  if ( Modernizr.csstransforms ) {
+    $('.nav a').each(function(){
+      this.addEventListener( 'click', BCXI, false );
+    });
+    
   }
-  
+    
   var section = 'intro';
 
-  $('.nav a').click(function(){
-    
-    var oldSection = section;
-    section = $(this).attr('href').slice(1);
-    
-    $(document.body).removeClass( oldSection ).addClass( section );
 
-    // window.location.hash = '#' + section;    
-    
-    return false;
-
-  });
+  // $('.nav a').click(function(){
+  //   
+  //   var oldSection = section;
+  //   section = $(this).attr('href').slice(1);
+  //   
+  //   $(document.body).removeClass( oldSection ).addClass( section );
+  // 
+  //   // window.location.hash = '#' + section;
+  //   
+  //   return false;
+  // 
+  // });
   
   // console.log( Modernizr )
   
