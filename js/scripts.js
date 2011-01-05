@@ -65,12 +65,41 @@ Beercamper.prototype.click = function( event ) {
   var targetLevel = $(event.target).parent().index(),
       scroll = targetLevel / (this.levels-1);
 
+  if ( Modernizr.csstransitions ) {
+    this.$content.addClass('transitions-on');
+  
+    this.content.addEventListener( 'webkitTransitionEnd', this, false );
+    this.content.addEventListener( 'transitionend', this, false );
+    this.content.addEventListener( 'oTransitionEnd', this, false );
+  }
+
+
   this.$window.scrollTop( scroll * ( this.$document.height() - this.$window.height() ) );
+
 
   event.preventDefault();
   
 };
 
+
+Beercamper.prototype.webkitTransitionEnd = function( event ) {
+  this.transitionEnded( event );
+};
+
+Beercamper.prototype.transitionend = function( event ) {
+  this.transitionEnded( event );
+};
+
+Beercamper.prototype.oTransitionEnd = function( event ) {
+  this.transitionEnded( event );
+};
+
+Beercamper.prototype.transitionEnded = function( event ) {
+  this.$content.removeClass('transitions-on');
+  this.content.removeEventListener( 'webkitTransitionEnd', this, false );
+  this.content.removeEventListener( 'transitionend', this, false );
+  this.content.removeEventListener( 'oTransitionEnd', this, false );
+};
 
 
 // BeerCamp '11 Global object
@@ -81,7 +110,7 @@ var BCXI = new Beercamper();
 $(function(){
   
   BCXI.$content = $('#content');
-
+  BCXI.content = document.getElementById('content');
 
   if ( Modernizr.csstransforms ) {
     $('.nav a').each(function(){

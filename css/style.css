@@ -359,6 +359,14 @@ a:hover {
           transition:         transform 1s;
 }
 */
+
+.csstransforms #content.transitions-on {
+  -webkit-transition: -webkit-transform 1s;
+     -moz-transition:    -moz-transform 1s;
+       -o-transition:      -o-transform 1s;
+          transition:         transform 1s;
+}
+
 /***************** Faux 3d  *****************/
 
 .faux3d #featuring {
