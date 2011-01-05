@@ -1024,6 +1024,27 @@ a:hover {
 
 #flip-cup .rules li:last-child { border-bottom: none; }
 
+#flip-cup .copy {
+  width: 310px;
+  position: absolute;
+  left: 10px;
+  top: 180px;
+}
+
+#flip-cup .copy h3 {
+  font-family: 'Hero';
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 0.9em;
+  margin-bottom: 20px;
+}
+
+#flip-cup .copy p {
+  font-size: 18px;
+  margin-bottom: 0.8em;
+}
+
 /***************** Scroll Proxy  *****************/
 
 
