@@ -1,3 +1,6 @@
+---
+layout: nil
+---
 <!doctype html>  
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
@@ -210,6 +213,25 @@
           </div> 
           
         </section> <!-- #sign-up -->
+        
+        {% for team_pair in site.team_pairs %}
+          {% assign team_a = team_pair.team_a %}
+          {% assign team_b = team_pair.team_b %}
+          <section id="team_pair{{ forloop.index }}" class="team_pair">
+            <h2>{{ team_pair.group }}</h2>
+            
+            {% assign team = team_pair.team_a %}
+            {% assign team_class = 'team-a' %}
+            {% include team.html %}
+            
+            {% if team_b %}
+              {% assign team = team_pair.team_b %}
+              {% assign team_class = 'team-b' %}
+              {% include team.html %}
+            {% endif %}
+            
+          </section> <!-- #team_pair{{ forloop.index }} -->
+        {% endfor %}
 
 
       </div> <!-- #content -->

@@ -1,0 +1,17 @@
+
+            <div class="team {{ team_class }}">
+              <h3>{{ team.name }}</h3>
+              <ul>
+                <li class="player1">
+                  {% if team.player1_twitter %}<a href="http://twitter.com/{{ team.player1_twitter }}">{% endif %}{{ team.player1 }}{% if team.player1_twitter %}</a>{% endif %}
+                </li>
+                <li class="player2">
+                  {% if team.player2_twitter %}<a href="http://twitter.com/{{ team.player2_twitter }}">{% endif %}{{ team.player2 }}{% if team.player2_twitter %}</a>{% endif %}
+                </li>
+                <li class="player3">
+                  {% if team.player3_twitter %}<a href="http://twitter.com/{{ team.player3_twitter }}">{% endif %}{{ team.player3 }}{% if team.player3_twitter %}</a>{% endif %}
+                </li>
+                <li class="player4">{{ team.player4 }}</li>
+                <li class="player5">{{ team.player5 }}</li>
+              </ul>
+            </div>

@@ -2,7 +2,7 @@
 // don't necessarily need the constructor, but I like using the 'this' keyword
 var Beercamper = function() {
   this.scrolled = 0;
-  this.levels = 5;
+  this.levels = 8;
   this.distance3d = 1000;
   
   this.$window = $(window);
