@@ -377,7 +377,7 @@ a:hover {
           transform: scale(3);
 }
 
-.faux3d #sponsors {
+.faux3d #sponsorz {
   -webkit-transform: scale(0.1111);
      -moz-transform: scale(0.1111);
       -ms-transform: scale(0.1111);
@@ -385,7 +385,7 @@ a:hover {
           transform: scale(0.1111);
 }
 
-.faux3d .sponsors #content {
+.faux3d .sponsorz #content {
   -webkit-transform: scale(9);
      -moz-transform: scale(9);
       -ms-transform: scale(9);
@@ -447,10 +447,10 @@ a:hover {
   -webkit-transform: translate3d( 0, 0, 1000px ) ;
 }
 
-.csstransforms3d #sponsors {
+.csstransforms3d #sponsorz {
   -webkit-transform: translate3d( 0, 0, -2000px );
 }
-.csstransforms3d .sponsors #content {
+.csstransforms3d .sponsorz #content {
   -webkit-transform: translate3d( 0, 0, 2000px ) ;
 }
 
@@ -517,13 +517,13 @@ a:hover {
 
 #intro .nav li.intro a,
 #featuring .nav li.featuring a,
-#sponsors .nav li.sponsors a,
+#sponsorz .nav li.sponsorz a,
 #flip-cup .nav li.flip-cup a,
 #sign-up .nav li.sign-up a,
 #teams .nav li.teams a,
 .intro .nav li.intro a,
 .featuring .nav li.featuring a,
-.sponsors .nav li.sponsors a,
+.sponsorz .nav li.sponsorz a,
 .flip-cup .nav li.flip-cup a,
 .sign-up .nav li.sign-up a,
 .teams .nav li.teams a
@@ -533,6 +533,11 @@ a:hover {
 
 #content .nav { display: none; }
 /*#container > .nav { display: none; }*/
+
+.no-csstransforms .nav {
+  position: fixed;
+  top: 40px;
+}
 
 /***************** Intro *****************/
 
@@ -808,13 +813,13 @@ a:hover {
 
 /***************** Sponsors  *****************/
 
-#content #sponsors h1 {
+#content #sponsorz h1 {
   font-size: 120px;
   line-height: 0.8em;
   margin-top: 27px;
 }
 
-#sponsors .blurb {
+#sponsorz .blurb {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -823,32 +828,32 @@ a:hover {
   text-align: center;
 }
 
-#sponsors .blurb strong {
+#sponsorz .blurb strong {
   font-weight: normal;
   font-family: 'Hero';
 }
 
-#sponsors .blurb a {
+#sponsorz .blurb a {
   background: white;
   color: #DD0;
   padding: 0.1em 0.3em;
   font-family: 'Hero';
 }
 
-#sponsors .blurb a:hover {
+#sponsorz .blurb a:hover {
   background: #B20;
 }
 
 /* Sponsor list */
 
-#sponsors .sponsor-list {
+#sponsorz .sponsor-list {
   list-style: none;
   margin: 0;
   position: absolute;
   top: 120px;
 }
 
-#sponsors .sponsor-list li {
+#sponsorz .sponsor-list li {
   position: absolute;
   width: 310px;
   height: 100px;
@@ -856,17 +861,17 @@ a:hover {
   margin: 10px;
 }
 
-#sponsors .sponsor-list li.n2 { left: 330px; }
-#sponsors .sponsor-list li.n3,
-#sponsors .sponsor-list li.n5,
-#sponsors .sponsor-list li.n7 { left: 660px; }
-#sponsors .sponsor-list li.n4,
-#sponsors .sponsor-list li.n5 { top: 120px; }
-#sponsors .sponsor-list li.n6,
-#sponsors .sponsor-list li.n7 { top: 240px; }
+#sponsorz .sponsor-list li.n2 { left: 330px; }
+#sponsorz .sponsor-list li.n3,
+#sponsorz .sponsor-list li.n5,
+#sponsorz .sponsor-list li.n7 { left: 660px; }
+#sponsorz .sponsor-list li.n4,
+#sponsorz .sponsor-list li.n5 { top: 120px; }
+#sponsorz .sponsor-list li.n6,
+#sponsorz .sponsor-list li.n7 { top: 240px; }
 
 
-#sponsors .fontfabric {
+#sponsorz .fontfabric {
   width: 310px;
   height: 40px;
   margin: 10px;
@@ -879,14 +884,14 @@ a:hover {
   text-transform: uppercase;
 }
 
-#sponsors .fontfabric b { 
+#sponsorz .fontfabric b { 
   font-family: 'Hero';
   font-weight: normal;
   font-size: 26px;
   text-transform: none;
 }
 
-#sponsors .fontfabric a {
+#sponsorz .fontfabric a {
   display: block;
   background: #223;
   color: #DD0;
