@@ -221,28 +221,31 @@ html, body {
   height: 100%;
 }
 
-#wrap {
+.csstransforms #wrap {
   height: 100%;
   width: 100%;
   position: fixed;
 }
 
-#offset {
+.csstransforms #offset {
   height: 50%;
   width: 100%;
 }
 
 #container {
-  position: relative;
+  margin: 0 auto;  
   width: 990px;
+}
+
+.csstransforms #container {
+  position: relative;
   height: 540px;
   top: -270px;
-  margin: 0 auto;
 /*  background: hsla( 0, 100%, 50%, 0.3 );*/
 }
 
-#content,
-#grid {
+.csstransforms #content,
+.csstransforms #grid {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -312,6 +315,22 @@ a:hover {
   text-align: center;
   font-weight: normal;
 }
+
+/***************** No Transforms *****************/
+
+.no-csstransforms #container {
+  margin-top: 60px;
+  position: relative;
+}
+
+.no-csstransforms #content section {
+  width: 100%;
+  height: 540px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+
 
 /***************** Transforms  *****************/
 
@@ -892,7 +911,7 @@ a:hover {
 /***************** Scroll Proxy  *****************/
 
 
-#scroll-proxy {
+.csstransforms #scroll-proxy {
   height: 5400px;
 }
 

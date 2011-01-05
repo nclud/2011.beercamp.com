@@ -65,13 +65,20 @@ Beercamper.prototype.jQueryReady = function() {
 
 };
 
-// BeerCamp '11 Global object
-var BCXI = new Beercamper();
+if ( Modernizr.csstransforms ) {
+  // BeerCamp '11 Global object
+  var BCXI = new Beercamper();
+  
+}
 
 
 $(function(){
   
-  BCXI.$content = $('#content');
+  if ( BCXI ) {
+    
+    BCXI.$content = $('#content');
+
+  }
   
   var section = 'intro';
 
