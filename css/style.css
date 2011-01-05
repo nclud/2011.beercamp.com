@@ -1045,6 +1045,15 @@ a:hover {
   margin-bottom: 0.8em;
 }
 
+/***************** Team sign up *****************/
+
+#sign-up-form {
+  position: absolute;
+  width: 100%;
+  top: 30px;
+}
+
+
 /***************** Scroll Proxy  *****************/
 
 

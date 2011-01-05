@@ -1,0 +1,85 @@
+.wufoo,
+.wufoo label.desc,
+.wufoo input.text,
+.wufoo li div,
+.wufoo li span,
+.wufoo li div label,
+.wufoo li span label {
+  color: #223;
+}
+
+h1 {
+  display: none;
+}
+
+#container {
+  width: auto;
+  border: none;
+  background: none;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+       -o-box-shadow: none;
+          box-shadow: none;
+}
+
+img#bottom, .info {
+    display: none !important;
+}
+
+
+.noI form.wufoo li {
+  float: left;
+  clear: none;
+} 
+
+.noI form.wufoo .half {
+  width: 48% !important;
+}
+
+.noI form.wufoo .fifth {
+  width: 18% !important;
+}
+
+
+input.medium {
+  width: 100%;
+}
+
+form li {
+  padding: 4px 1% 6px;
+}
+
+form.wufoo li.focused {
+  background-color: white;
+}
+
+.wufoo input.text {
+  background: #DD0 !important;
+  border: 2px solid;
+}
+
+
+.noI .wufoo li.team-name,
+.noI .wufoo li.player1-name,
+.noI .wufoo li.player1-twitter {
+  clear: both;
+}
+
+form.wufoo li.error {
+  background: red !important;
+}
+
+form.wufoo li.error label.desc,
+form.wufoo li.error p.error {
+  color: white !important;
+}
+
+#errorLi {
+  margin-top: 0;
+  margin-bottom: 3px;
+  width: 99% !important;
+  border: none;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
