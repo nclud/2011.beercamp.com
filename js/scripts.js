@@ -1,6 +1,8 @@
 // BeerCamp '11 Global constructor
 var Beercamper = function() {
   this.scrolled = 0;
+  this.levels = 5;
+  this.distance3d = 1000;
   
   this.$window = $(window);
   this.$document = $(document);
@@ -22,7 +24,7 @@ Beercamper.prototype.handleEvent = function( event ) {
 };
 
 Beercamper.prototype.getScroll2DTransform = function() {
-  var scale = Math.pow( 3, this.scrolled * 4 );
+  var scale = Math.pow( 3, this.scrolled * (this.levels - 1) );
       prop = 'scale(' + scale + ')',
       style = {
         WebkitTransform : prop,
@@ -35,7 +37,7 @@ Beercamper.prototype.getScroll2DTransform = function() {
 
 Beercamper.prototype.getScroll3DTransform = function() {
   var style = {
-    WebkitTransform : 'translate3d( 0, 0, ' + (this.scrolled * 4000) + 'px )'
+    WebkitTransform : 'translate3d( 0, 0, ' + (this.scrolled * (this.levels - 1) * this.distance3d ) + 'px )'
   };
   return style;
 };
