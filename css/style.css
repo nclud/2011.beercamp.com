@@ -341,7 +341,8 @@ a:hover {
 }
 
 .csstransforms #content section,
-.csstransforms #content {
+.csstransforms #content,
+.csstransforms #environment {
   -webkit-transform-origin: center 450px;
      -moz-transform-origin: center 450px;
       -ms-transform-origin: center 450px;
@@ -427,9 +428,11 @@ a:hover {
 
 /***************** True 3d  *****************/
 
-.csstransforms3d #container {
+.csstransforms3d #environment {
   -webkit-perspective: 500;
-  -webkit-perspective-origin: center 440px;
+  -webkit-perspective-origin: center center;
+  width: 100%;
+  height: 540px;
 }
 
 .csstransforms3d #content {
