@@ -36,8 +36,16 @@ Beercamper.prototype.getScroll2DTransform = function( scroll ) {
 };
 
 Beercamper.prototype.getScroll3DTransform = function( scroll ) {
-  var style = {
-    WebkitTransform : 'translate3d( 0, 0, ' + ( scroll * (this.levels - 1) * this.distance3d ) + 'px )'
+  var z = ( scroll * (this.levels - 1) * this.distance3d ),
+      leveledZ = this.distance3d / 2 - Math.abs( ( z % this.distance3d ) - this.distance3d / 2 ),
+      style;
+  
+  if ( leveledZ < 5 ) {
+    z = Math.round( z / this.distance3d ) * this.distance3d;
+  }
+  
+  style = {
+    WebkitTransform : 'translate3d( 0, 0, ' + z + 'px )'
   };
   return style;
 };
