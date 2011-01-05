@@ -477,13 +477,14 @@ a:hover {
   position: absolute;
   z-index: 100;
   top: 0;
-  width: 100%;
+  border: 2px solid #DD0;
+  border-right: none;
 /*  background: #223;*/
 }
 
 .nav li {
   float: left;
-  margin-right: 2px;
+  border-right: 2px solid #DD0;
   text-align: center;
   font-size: 15px;
   text-transform: uppercase;
