@@ -503,7 +503,7 @@ a:hover {
 
 .nav li a {
   display: block;
-  background: #white;
+  background: white;
   color: #223;
 /*  text-shadow:
    1px  0px #DD0,
@@ -520,6 +520,7 @@ a:hover {
 
 .nav li a:hover {
   background: #B20;
+  color: #DD0;
 }
 
 #intro .nav li.intro a,
