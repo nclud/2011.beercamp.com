@@ -148,16 +148,25 @@ $(function(){
     })
   }
     
-    
   $('#totem').click(function(){
-    var $audio = $('<audio />', { autoPlay : 'autoplay' })
-    $('<source>').attr('src', 'audio/inception.mp3').appendTo( $audio );
-    $('<source>').attr('src', 'audio/inception.ogg').appendTo( $audio );
+    var $audio = $('<audio />', { 
+      autoPlay : 'autoplay'
+    });
+
+    $('<source>', {
+      src : 'audio/inception.mp3'
+    }).appendTo( $audio );
+
+    $('<source>', {
+      src : 'audio/inception.ogg'
+    }).appendTo( $audio );
+
     $body.append( $audio );
     setTimeout( function( $audio ){
-      $audio.remove();
+      // $audio.remove();
     }, 4000, $audio );
-    return false;
+
+    $('#intro h1').text('Beerception').css({ fontSize: '132px' });
   });
   
 });
