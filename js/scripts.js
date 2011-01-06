@@ -2,8 +2,15 @@
 // don't necessarily need the constructor, but I like using the 'this' keyword
 var Beercamper = function() {
   this.scrolled = 0;
-  this.levels = 8;
+  this.levels = 7;
   this.distance3d = 1000;
+  this.levelGuide = {
+    '#intro' : 0,
+    '#featuring' : 1,
+    '#sponsorz' : 2,
+    '#flip-cup' : 3,
+    '#teams' : 4
+  };
   
   this.$window = $(window);
   this.$document = $(document);
@@ -70,7 +77,7 @@ Beercamper.prototype.getScroll = function() {
 Beercamper.prototype.click = function( event ) {
 
   //  nav click event
-  var targetLevel = $(event.target).parent().index(),
+  var targetLevel = this.levelGuide[ event.target.getAttribute('href') ],
       scroll = targetLevel / (this.levels-1);
 
   if ( Modernizr.csstransitions ) {
@@ -119,13 +126,15 @@ $(function(){
   
   BCXI.$content = $('#content');
   BCXI.content = document.getElementById('content');
+  
+  
+  $body = $('body');
 
   if ( Modernizr.csstransforms ) {
-    $('.nav a').each(function(){
+    $('.page-nav').each(function(){
       this.addEventListener( 'click', BCXI, false );
     });
     
-    $body = $('body');
     
     $('#start-sign-up').click(function(){
       $body.addClass('sign-up');
@@ -139,21 +148,16 @@ $(function(){
     })
   }
     
-
-  // $('.nav a').click(function(){
-  //   
-  //   var oldSection = section;
-  //   section = $(this).attr('href').slice(1);
-  //   
-  //   $(document.body).removeClass( oldSection ).addClass( section );
-  // 
-  //   // window.location.hash = '#' + section;
-  //   
-  //   return false;
-  // 
-  // });
-  
-  // console.log( Modernizr )
-  
+    
+  $('#totem').click(function(){
+    var $audio = $('<audio />', { autoPlay : 'autoplay' })
+    $('<source>').attr('src', 'audio/inception.mp3').appendTo( $audio );
+    $('<source>').attr('src', 'audio/inception.ogg').appendTo( $audio );
+    $body.append( $audio );
+    setTimeout( function( $audio ){
+      $audio.remove();
+    }, 4000, $audio );
+    return false;
+  });
   
 });

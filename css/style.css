@@ -261,7 +261,7 @@ html, body {
   pointer-events: none;
   border: 1px solid hsla( 0, 0%, 0%, 0.1 );
 /*  background: hsla( 240, 100%, 50%, 0.3 );*/
-/*  display: none;*/
+  display: none;
 }
 
 
@@ -393,7 +393,7 @@ a:hover {
           transform: scale(0.037);
 }
 
-.faux3d #sign-up {
+.faux3d #teams {
   -webkit-transform: scale(0.01234);
      -moz-transform: scale(0.01234);
       -ms-transform: scale(0.01234);
@@ -402,20 +402,12 @@ a:hover {
 }
 
 
-.faux3d #teams {
-  -webkit-transform: scale(0.00411522633744856);
-     -moz-transform: scale(0.00411522633744856);
-      -ms-transform: scale(0.00411522633744856);
-       -o-transform: scale(0.00411522633744856);
-          transform: scale(0.00411522633744856);
-}
-
 .faux3d #limbo {
-  -webkit-transform: scale(0.0004572473708276177);
-     -moz-transform: scale(0.0004572473708276177);
-      -ms-transform: scale(0.0004572473708276177);
-       -o-transform: scale(0.0004572473708276177);
-          transform: scale(0.0004572473708276177);
+  -webkit-transform: scale(0.0013717421124828531);
+     -moz-transform: scale(0.0013717421124828531);
+      -ms-transform: scale(0.0013717421124828531);
+       -o-transform: scale(0.0013717421124828531);
+          transform: scale(0.0013717421124828531);
 }
 
 
@@ -447,16 +439,12 @@ a:hover {
   -webkit-transform: translate3d( 0, 0, -3000px );
 }
 
-.csstransforms3d #sign-up {
+.csstransforms3d #teams {
   -webkit-transform: translate3d( 0, 0, -4000px );
 }
 
-.csstransforms3d #teams {
-  -webkit-transform: translate3d( 0, 0, -5000px );
-}
-
 .csstransforms3d #limbo {
-  -webkit-transform: translate3d( 0, 0, -7000px );
+  -webkit-transform: translate3d( 0, 0, -6000px );
 }
 
 /***************** Nav  *****************/
@@ -911,7 +899,6 @@ a:hover {
 #flip-cup .arrow {
   position: absolute;
   
-  font-family: 'MOD';
   font-size: 60px;
   width: 200px;
   left: 395px;
@@ -925,6 +912,8 @@ a:hover {
   line-height: 0.7em;
   text-align: center;
   padding-top: 10px;
+  text-transform: uppercase;
+  font-family: 'Hero';
 }
 
 #flip-cup .arrow a span {
@@ -1232,6 +1221,19 @@ body.sign-up { background-color: #223; }
 }
 
 .csstransforms .sign-up #content { opacity: 0.3; }
+
+
+/***************** *****************/
+
+#limbo {
+  text-align: center;
+}
+
+#totem {
+  display: inline-block;
+  margin-top: 300px;
+}
+
 
  /*
   * print styles

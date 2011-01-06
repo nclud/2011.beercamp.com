@@ -57,12 +57,11 @@ layout: nil
     
     
     <ul class="nav">
-      <li class="intro"><a href="#intro">Intro</a></li>
-      <li class="featuring"><a href="#featuring">Featuring</a></li>
-      <li class="sponsorz"><a href="#sponsorz">Sponsors</a></li>
-      <li class="flip-cup"><a href="#flip-cup">Flip Cup</a></li>
-      <li class="sign-up"><a href="#sign-up">Team Sign Up</a></li>
-      <li class="teams"><a href="#team">Teams</a></li>
+      <li class="intro"><a href="#intro" class="page-nav">Intro</a></li>
+      <li class="featuring"><a href="#featuring" class="page-nav">Featuring</a></li>
+      <li class="sponsorz"><a href="#sponsorz" class="page-nav">Sponsors</a></li>
+      <li class="flip-cup"><a href="#flip-cup" class="page-nav">Flip Cup</a></li>
+      <li class="teams"><a href="#teams" class="page-nav">Teams</a></li>
     </ul>
     
     <div id="environment">
@@ -195,16 +194,6 @@ layout: nil
           
         </section> <!-- #flip-cup -->
 
-        <section id="sign-up">
-
-          <h1 class="h1">
-            <span class="title-team"><b>T</b><b>e</b><b>a</b><b>m</b></span>
-            <span class="sign">Sign</span>
-            <span class="up">Up</span>
-          </h1>
-
-        </section> <!-- #sign-up -->
-        
         <section id="teams">
 
           <h1><span class="tournament"><span class="tourn">Tourn</span><span class="ament">ament</span></span> <span class="teams-title">Teams</span></h1>
@@ -230,7 +219,7 @@ layout: nil
         </section> <!-- #teams -->
         
         <section id="limbo">
-          <img src="img/totem01.gif" alt="" />
+          <a href="#intro" id="totem" class="page-nav"><img src="img/totem01.gif" alt="" /></a>
         </section> <!-- #limbo -->
         
       </div> <!-- #content -->
@@ -263,7 +252,10 @@ layout: nil
 
 <div id="scroll-proxy"></div>
 
-
+<audio preload="auto">
+  <source src="audio/inception.mp3"></source>
+  <source src="audio/inception.ogg"></source>
+</audio>
   
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
