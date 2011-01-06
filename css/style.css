@@ -411,7 +411,6 @@ a:hover {
 }
 
 .faux3d #limbo {
-  background: black;
   -webkit-transform: scale(0.0004572473708276177);
      -moz-transform: scale(0.0004572473708276177);
       -ms-transform: scale(0.0004572473708276177);
@@ -448,12 +447,17 @@ a:hover {
   -webkit-transform: translate3d( 0, 0, -3000px );
 }
 
-
-
 .csstransforms3d #sign-up {
   -webkit-transform: translate3d( 0, 0, -4000px );
 }
 
+.csstransforms3d #teams {
+  -webkit-transform: translate3d( 0, 0, -5000px );
+}
+
+.csstransforms3d #limbo {
+  -webkit-transform: translate3d( 0, 0, -7000px );
+}
 
 /***************** Nav  *****************/
 
@@ -891,13 +895,15 @@ a:hover {
   font-size: 146px;
 }
 
-#flip-cup h1 .tournament {
+#flip-cup h1 .tournament,
+#teams    h1 .tournament {
   display: inline-block;
   font-size: 69px;
   line-height: 0.8em;
 }
 
-#flip-cup h1 .tournament span {
+#flip-cup h1 .tournament span,
+#teams    h1 .tournament span {
   display: block;
 }
 
@@ -1032,6 +1038,69 @@ a:hover {
   top: 30px;
 }
 
+/***************** Teams  *****************/
+
+#content #teams h1 {
+  position: relative;
+  top: 30px;
+}
+
+#teams h1 span {
+  display: block !important;
+  line-height: 0.8em;
+  font-size: 80px !important;
+}
+
+#teams .team-list {
+  position: absolute;
+  top: 30px;
+  height: 510px;
+  width: 100%;
+  overflow-y: scroll;
+  list-style: none;
+  margin: 0;
+}
+
+#teams .team-list .team {
+  width: 310px;
+  margin: 10px;
+/*  border-top: 10px solid;*/
+  
+}
+#teams .team-list .team-a { 
+  float: left; 
+  clear: left; 
+}
+#teams .team-list .team-b { 
+  float: right; 
+  clear: right; 
+  text-align: right;
+}
+
+#teams .team-list .team h2 {
+  font-family: 'Hero';
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 1.0em;
+  background: #223;
+  color: #DD0;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+#teams .team-list .team .player-list {
+  list-style: none;
+  margin: 0;
+}
+
+#teams .team-list .team .player {
+  font-size: 16px;
+  padding: 2px 0;
+}
+
+#teams .team-list .team .player a {
+  font-family: 'Hero';
+}
 
 /***************** Scroll Proxy  *****************/
 
