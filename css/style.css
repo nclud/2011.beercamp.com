@@ -342,7 +342,8 @@ a:hover {
 
 .csstransforms #content section,
 .csstransforms #content,
-.csstransforms #environment {
+.csstransforms #environment,
+.csstransforms #teams {
   -webkit-transform-origin: center 450px;
      -moz-transform-origin: center 450px;
       -ms-transform-origin: center 450px;
@@ -369,7 +370,8 @@ a:hover {
 
 /***************** Faux 3d  *****************/
 
-.faux3d #featuring {
+.faux3d #featuring,
+.faux3d #team-pair2 {
   -webkit-transform: scale(0.3333);
      -moz-transform: scale(0.3333);
       -ms-transform: scale(0.3333);
@@ -377,30 +379,14 @@ a:hover {
           transform: scale(0.3333);
 }
 
-.faux3d .featuring #content {
-  -webkit-transform: scale(3);
-     -moz-transform: scale(3);
-      -ms-transform: scale(3);
-       -o-transform: scale(3);
-          transform: scale(3);
-}
-
-.faux3d #sponsorz {
+.faux3d #sponsorz,
+.faux3d #team-pair3 {
   -webkit-transform: scale(0.1111);
      -moz-transform: scale(0.1111);
       -ms-transform: scale(0.1111);
        -o-transform: scale(0.1111);
           transform: scale(0.1111);
 }
-
-.faux3d .sponsorz #content {
-  -webkit-transform: scale(9);
-     -moz-transform: scale(9);
-      -ms-transform: scale(9);
-       -o-transform: scale(9);
-          transform: scale(9);
-}
-
 
 .faux3d #flip-cup {
   -webkit-transform: scale(0.037);
@@ -410,29 +396,57 @@ a:hover {
           transform: scale(0.037);
 }
 
-.faux3d .flip-cup #content {
-  -webkit-transform: scale(27);
-     -moz-transform: scale(27);
-      -ms-transform: scale(27);
-       -o-transform: scale(27);
-          transform: scale(27);
-}
-
 .faux3d #sign-up {
-  -webkit-transform: scale(0.0123);
-     -moz-transform: scale(0.0123);
-      -ms-transform: scale(0.0123);
-       -o-transform: scale(0.0123);
-          transform: scale(0.0123);
+  -webkit-transform: scale(0.01234);
+     -moz-transform: scale(0.01234);
+      -ms-transform: scale(0.01234);
+       -o-transform: scale(0.01234);
+          transform: scale(0.01234);
 }
 
-.faux3d .sign-up #content {
-  -webkit-transform: scale(81);
-     -moz-transform: scale(81);
-      -ms-transform: scale(81);
-       -o-transform: scale(81);
-          transform: scale(81);
+
+.faux3d #teams {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0.00411522633744856);
+     -moz-transform: scale(0.00411522633744856);
+      -ms-transform: scale(0.00411522633744856);
+       -o-transform: scale(0.00411522633744856);
+          transform: scale(0.00411522633744856);
 }
+
+.faux3d #teams section {
+  background: hsla( 240, 100%, 30%, 0.1 );
+  height: 300px;
+}
+
+/*.faux3d #team-pair1 {
+  -webkit-transform: scale(0.00411522633744856);
+     -moz-transform: scale(0.00411522633744856);
+      -ms-transform: scale(0.00411522633744856);
+       -o-transform: scale(0.00411522633744856);
+          transform: scale(0.00411522633744856);
+}
+
+.faux3d #team-pair2 {
+  -webkit-transform: scale(0.0013717421124828531);
+     -moz-transform: scale(0.0013717421124828531);
+      -ms-transform: scale(0.0013717421124828531);
+       -o-transform: scale(0.0013717421124828531);
+          transform: scale(0.0013717421124828531);
+}
+
+
+.faux3d #team-pair3 {
+  background: black;
+  -webkit-transform: scale(0.0001);
+     -moz-transform: scale(0.0004572473708276177);
+      -ms-transform: scale(0.0004572473708276177);
+       -o-transform: scale(0.0004572473708276177);
+          transform: scale(0.0004572473708276177);
+}*/
+
 
 /***************** True 3d  *****************/
 
@@ -451,31 +465,23 @@ a:hover {
 .csstransforms3d #featuring {
   -webkit-transform: translate3d( 0, 0, -1000px ) ;
 }
-.csstransforms3d .featuring #content {
-  -webkit-transform: translate3d( 0, 0, 1000px ) ;
-}
+
 
 .csstransforms3d #sponsorz {
   -webkit-transform: translate3d( 0, 0, -2000px );
 }
-.csstransforms3d .sponsorz #content {
-  -webkit-transform: translate3d( 0, 0, 2000px ) ;
-}
+
 
 .csstransforms3d #flip-cup {
   -webkit-transform: translate3d( 0, 0, -3000px );
 }
 
-.csstransforms3d .flip-cup #content {
-  -webkit-transform: translate3d( 0, 0, 3000px );
-}
+
 
 .csstransforms3d #sign-up {
   -webkit-transform: translate3d( 0, 0, -4000px );
 }
-.csstransforms3d .sign-up #content {
-  -webkit-transform: translate3d( 0, 0, 4000px );
-}
+
 
 /***************** Nav  *****************/
 
