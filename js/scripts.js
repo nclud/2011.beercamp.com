@@ -18,7 +18,6 @@ var Beercamper = function() {
   
   // adjustment for faux 3d
   this.levelAdjust = Modernizr.csstransforms && !Modernizr.csstransforms3d ? 0.4 : 0;
-  console.log( this.levelAdjust )
   
   this.$window = $(window);
   this.$document = $(document);
@@ -96,14 +95,12 @@ Beercamper.prototype.click = function( event ) {
 // handle click events
 Beercamper.prototype.click = function( event ) {
 
-  console.log( event.target.getAttribute('href') )
 
   //  nav click event
   var targetLevel = this.levelGuide[ event.target.getAttribute('href') ],
       scroll = targetLevel / (this.levels-1);
 
   if ( Modernizr.csstransitions ) {
-    console.log('transitions on')
     this.$content.addClass('transitions-on');
   
     this.content.addEventListener( 'webkitTransitionEnd', this, false );
