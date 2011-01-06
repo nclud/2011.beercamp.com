@@ -1066,12 +1066,7 @@ a:hover {
   font-size: 166px;
 }
 
-#sign-up-form {
-  position: absolute;
-  width: 100%;
-  top: 30px;
-  z-index: 100;
-}
+
 
 /***************** Teams  *****************/
 
@@ -1142,6 +1137,101 @@ a:hover {
 .csstransforms #scroll-proxy {
   height: 5400px;
 }
+
+/***************** Sign Up form  *****************/
+
+#sign-up-form h2 {
+  font-family: 'MOD';
+  font-weight: normal;
+  font-size: 124px;
+  line-height: 0.9em;
+}
+
+.csstransforms #sign-up-form {
+  position: absolute;
+  width: 970px;
+  top: 30px;
+  z-index: 100;
+  padding: 10px;
+  background: #DD0;
+  height: 520px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: scale(0.001);
+     -moz-transform: scale(0.001);
+      -ms-transform: scale(0.001);
+       -o-transform: scale(0.001);
+          transform: scale(0.001);
+  -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+.csstransforms .sign-up #sign-up-form {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: scale(1);
+     -moz-transform: scale(1);
+      -ms-transform: scale(1);
+       -o-transform: scale(1);
+          transform: scale(1);
+}
+
+#sign-up-form .close { display: none; }
+
+.csstransforms #sign-up-form .close {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.csstransforms #sign-up-form .close a {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 34px;
+  display: block;
+  height: 100%;
+  background: white;
+  color: #B20;
+  text-align: center;
+  font-size: 40px;
+}
+
+.csstransforms #sign-up-form .close a:hover {
+  background: #B20;
+  color: white;
+}
+
+body {
+  -webkit-transition: background-color 0.5s;
+     -moz-transition: background-color 0.5s;
+       -o-transition: background-color 0.5s;
+          transition: background-color 0.5s;
+}
+
+body.sign-up { background-color: #223; }
+
+.csstransforms #content {
+  -webkit-transition: opacity 0.5s;
+     -moz-transition: opacity 0.5s;
+       -o-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+}
+
+.csstransforms .sign-up #sign-up-form {
+  opacity: 1;
+  display: block;
+}
+
+.csstransforms .sign-up #content { opacity: 0.3; }
 
  /*
   * print styles

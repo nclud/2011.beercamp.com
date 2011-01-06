@@ -189,7 +189,7 @@ layout: nil
           </div>
 
           <div class="arrow">
-            <a href="#sign-up"><span class="team">Team</span> <span class="sign-up">sign up</span></a>
+            <a id="start-sign-up" href="#sign-up"><span class="team">Team</span> <span class="sign-up">sign up</span></a>
           </div>
           
           
@@ -203,21 +203,6 @@ layout: nil
             <span class="up">Up</span>
           </h1>
 
-          <div id="sign-up-form">
-            <script>
-              var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));
-            </script>
-            <script>
-              var q7x3p3 = new WufooForm();
-              q7x3p3.initialize({
-              'userName':'daveatnclud', 
-              'formHash':'q7x3p3', 
-              'autoResize':true,
-              'height':'800'});
-              q7x3p3.display();
-            </script>
-          </div> 
-          
         </section> <!-- #sign-up -->
         
         <section id="teams">
@@ -253,6 +238,23 @@ layout: nil
 
       
     </div> <!-- #environment -->
+    
+    <div id="sign-up-form">
+      <h2>Team Sign Up</h2>
+      <div class="close"><a href="#close" title="Close">&times;</a></div>
+      <script>
+        var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script>
+        var q7x3p3 = new WufooForm();
+        q7x3p3.initialize({
+        'userName':'daveatnclud', 
+        'formHash':'q7x3p3', 
+        'autoResize':true,
+        'height':'800'});
+        q7x3p3.display();
+      </script>
+    </div>
     
   </div> <!-- #container -->
   

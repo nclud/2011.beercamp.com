@@ -125,10 +125,20 @@ $(function(){
       this.addEventListener( 'click', BCXI, false );
     });
     
+    $body = $('body');
+    
+    $('#start-sign-up').click(function(){
+      $body.addClass('sign-up');
+      return false;
+    })
+    
+    $('#sign-up-form .close a').click(function(){
+      $body.removeClass('sign-up');
+      return false;
+      
+    })
   }
     
-  var section = 'intro';
-
 
   // $('.nav a').click(function(){
   //   
