@@ -1032,10 +1032,45 @@ a:hover {
 
 /***************** Team sign up *****************/
 
+#sign-up .h1 {
+  position: absolute;
+  left: 5px;
+  top: 300px;
+}
+
+#sign-up .h1 .title-team {
+  display: block;
+  position: absolute;
+}
+
+#sign-up .h1 .title-team b {
+  font-weight: normal;
+  display: block;
+  line-height: 0.75em;
+  font-size: 70px;
+}
+
+#sign-up .h1 .sign,
+#sign-up .h1 .up {
+  position: absolute;
+  left: 70px;
+  line-height: 0.8em;
+}
+
+#sign-up .h1 .sign {
+  font-size: 90px;
+}
+
+#sign-up .h1 .up {
+  top: 80px;
+  font-size: 166px;
+}
+
 #sign-up-form {
   position: absolute;
   width: 100%;
   top: 30px;
+  z-index: 100;
 }
 
 /***************** Teams  *****************/
@@ -1078,7 +1113,6 @@ a:hover {
 }
 
 #teams .team-list .team h2 {
-  font-family: 'Hero';
   font-weight: normal;
   font-size: 26px;
   line-height: 1.0em;
