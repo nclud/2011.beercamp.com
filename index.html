@@ -214,28 +214,31 @@ layout: nil
           
         </section> <!-- #sign-up -->
         
-        <div id="teams">
+        <section id="teams">
 
-          {% for team_pair in site.team_pairs %}
-            {% assign team_a = team_pair.team_a %}
-            {% assign team_b = team_pair.team_b %}
-            <section id="team-pair{{ forloop.index }}" class="team_pair">
-              <h2>{{ team_pair.group }}</h2>
-
-              {% assign team = team_pair.team_a %}
-              {% assign team_class = 'team-a' %}
-              {% include team.html %}
-
-              {% if team_b %}
-                {% assign team = team_pair.team_b %}
-                {% assign team_class = 'team-b' %}
-                {% include team.html %}
-              {% endif %}
-
-            </section> <!-- #team-pair{{ forloop.index }} -->
+          <ul class="team-list">
+          {% for team in site.teams %}
+            <li class="team {% cycle 'team-a', 'team-b' %}">
+              <h2>{{ team.name }}</h2>
+              <ul class="player-list">
+                {% for player in team.players %}
+                <li class="player">
+                  <b>{{ player.name }}</b>
+                  {% if player.twitter %}
+                    <a href="http://twitter.com/{{ player.twitter }}">@{{ player.twitter }}</a>
+                  {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
           {% endfor %}
+          </ul>
           
-        </div> <!-- #teams -->
+        </section> <!-- #teams -->
+        
+        <section id="limbo">
+          
+        </section> <!-- #limbo -->
         
       </div> <!-- #content -->
 

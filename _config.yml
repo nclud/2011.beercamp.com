@@ -1,68 +1,60 @@
 
-
 name: BeerCamp at SXSW 2011
 
-# - name: 
-#   player1: 
-#   player2: 
-#   player3: 
-#   player4: 
-#   player5: 
-#   player1_twitter: 
-#   player2_twitter: 
-#   player3_twitter:
+teams:
+  - name: nclud One
+    players:
+      - name: Martin Ringlein
+        twitter : martymadrid
+      - name: Alex Giron
+        twitter: alexgiron
+      - name: Lauren Moon
+        twitter: laurenmoon
+      - name: Brandon Jones
+        twitter: btj
+      - name: Brian Singer
+  
+  - name: Nclud 2 For Realz. Hide Yo Kids. Hide Yo Wife
+    players:
+      - name: Tom Gianttassio
+        twitter: attasi
+      - name: David DeSandro
+        twitter: desandro
+      - name: Dan Drinkard
+        twitter: dandrinkard
+      - name: Doris Steere
+        twitter: steeredc
+      - name: Michael Dick
+        twitter: michaeldick
 
-team_pairs:
-  - group: Division A
-    team_a:
-      name: nclud One
-      player1: Martin Ringlein
-      player2: Alex Giron
-      player3: Lauren Moon
-      player4: Brandon Jones
-      player5: Brian Singer
-      player1_twitter: martymadrid
-      player2_twitter: alexgiron
-      player3_twitter: laurenmoon
-      
-    team_b:
-      name: Nclud 2 For Realz. Hide Yo Kids. Hide Yo Wife
-      player1: Tom Gianttassio
-      player2: David DeSandro
-      player3: Dan Drinkard
-      player4: Doris Steere
-      player5: Michael Dick
-      player2_twitter: desandro
+  - name: YayQuery Sparkle Force
+    players:
+    - name: Commodore General Alex Sexton
+      twitter: slexaxton
+    - name: Brigadier 1st Class Adam J. Sontag
+      twitter: ajpiano
+    - name: Paul Irish
+      twitter: paul_irish
+    - name: Rebecca Murphey
+      twitter: rmurphey
+    - name: John Resig in spirit
+      twitter: jresig
 
-  - group: Division B
-    team_a :
-      name: YayQuery Sparkle Force
-      player1: Commodore General Alex Sexton
-      player2: Brigadier 1st Class Adam J. Sontag
-      player3: Paul Irish
-      player4: Rebecca Murphey
-      player5: John Resig in spirit
-      player1_twitter: slexaxton
-      player2_twitter: ajpiano
-      player3_twitter: paul_irish
+  - name: Hanerinoids
+    players: 
+      - name: Patrick Haney
+        twitter: notasausage
+      - name: Jenna Marino
+        twitter: jennamarino
+      - name: John Doe
+      - name: Jane Doe
+      - name: Jacob D'oh!
 
-    team_b:
-      name: Hanerinoids
-      player1: Patrick Haney
-      player2: Jenna Marino
-      player3: John Doe
-      player4: Jane Doe
-      player5: Jacob D'oh!
-      player1_twitter: notasausage
-      player2_twitter: jennamarino
-
-  - group: Waitlist
-    team_a:
-      name: The cast of Blindness
-      player1: Mark Ruffalo
-      player2: Julianne Moore
-      player3: Danny Glover
-      player4: Gael García Bernal
-      player5: Don McKellar
-      player2_twitter: twitter
+  - name: The cast of Blindness
+    players:
+      - name: Mark Ruffalo
+      - name: Julianne Moore
+      - name: Danny Glover
+      - name: Gael García Bernal
+      - name: Don McKellar
 

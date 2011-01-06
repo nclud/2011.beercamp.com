@@ -342,8 +342,7 @@ a:hover {
 
 .csstransforms #content section,
 .csstransforms #content,
-.csstransforms #environment,
-.csstransforms #teams {
+.csstransforms #environment {
   -webkit-transform-origin: center 450px;
      -moz-transform-origin: center 450px;
       -ms-transform-origin: center 450px;
@@ -370,8 +369,7 @@ a:hover {
 
 /***************** Faux 3d  *****************/
 
-.faux3d #featuring,
-.faux3d #team-pair2 {
+.faux3d #featuring {
   -webkit-transform: scale(0.3333);
      -moz-transform: scale(0.3333);
       -ms-transform: scale(0.3333);
@@ -379,8 +377,7 @@ a:hover {
           transform: scale(0.3333);
 }
 
-.faux3d #sponsorz,
-.faux3d #team-pair3 {
+.faux3d #sponsorz {
   -webkit-transform: scale(0.1111);
      -moz-transform: scale(0.1111);
       -ms-transform: scale(0.1111);
@@ -406,9 +403,6 @@ a:hover {
 
 
 .faux3d #teams {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   -webkit-transform: scale(0.00411522633744856);
      -moz-transform: scale(0.00411522633744856);
       -ms-transform: scale(0.00411522633744856);
@@ -416,36 +410,14 @@ a:hover {
           transform: scale(0.00411522633744856);
 }
 
-.faux3d #teams section {
-  background: hsla( 240, 100%, 30%, 0.1 );
-  height: 300px;
-}
-
-/*.faux3d #team-pair1 {
-  -webkit-transform: scale(0.00411522633744856);
-     -moz-transform: scale(0.00411522633744856);
-      -ms-transform: scale(0.00411522633744856);
-       -o-transform: scale(0.00411522633744856);
-          transform: scale(0.00411522633744856);
-}
-
-.faux3d #team-pair2 {
-  -webkit-transform: scale(0.0013717421124828531);
-     -moz-transform: scale(0.0013717421124828531);
-      -ms-transform: scale(0.0013717421124828531);
-       -o-transform: scale(0.0013717421124828531);
-          transform: scale(0.0013717421124828531);
-}
-
-
-.faux3d #team-pair3 {
+.faux3d #limbo {
   background: black;
-  -webkit-transform: scale(0.0001);
+  -webkit-transform: scale(0.0004572473708276177);
      -moz-transform: scale(0.0004572473708276177);
       -ms-transform: scale(0.0004572473708276177);
        -o-transform: scale(0.0004572473708276177);
           transform: scale(0.0004572473708276177);
-}*/
+}
 
 
 /***************** True 3d  *****************/
