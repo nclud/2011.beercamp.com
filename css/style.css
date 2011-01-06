@@ -532,6 +532,11 @@ a:hover {
   margin-top: 20px;
 }
 
+#content #intro h1.beerception {
+  font-size: 132px;
+  color: #B20;
+}
+
 #intro h2 {
   font-family: 'MOD', 'Helvetica Neue', Arial, sans-serif;
   text-transform: uppercase;
@@ -823,8 +828,8 @@ a:hover {
   position: absolute;
   width: 310px;
   height: 100px;
-  background: white;
   margin: 10px;
+  text-align: center;
 }
 
 #sponsorz .sponsor-list li.n2 { left: 330px; }
@@ -836,6 +841,26 @@ a:hover {
 #sponsorz .sponsor-list li.n6,
 #sponsorz .sponsor-list li.n7 { top: 240px; }
 
+#sponsorz .sponsor-list li a {
+  background-image: url('../img/sponsors.png');
+  height: 100%;
+  display: block;
+}
+
+#sponsorz .victory { background-position: 0      0; }
+#sponsorz .nclud   { background-position: 0 -100px; }
+
+
+#sponsorz .sponsor-list li.open {
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 100px;
+  border: 2px solid;
+  font-family: 'Hero', 'Helvetica Neue', Arial, sans-serif;
+  color: white;
+}
+
+/* fontfabric link */
 
 #sponsorz .fontfabric {
   width: 310px;
@@ -859,7 +884,12 @@ a:hover {
 
 #sponsorz .fontfabric a {
   display: block;
-  background: #223;
+  background: white;
+  color: #223;
+}
+
+#sponsorz .fontfabric a:hover {
+  background: #B20;
   color: #DD0;
 }
 

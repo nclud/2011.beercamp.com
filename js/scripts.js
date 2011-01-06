@@ -135,7 +135,6 @@ $(function(){
       this.addEventListener( 'click', BCXI, false );
     });
     
-    
     $('#start-sign-up').click(function(){
       $body.addClass('sign-up');
       return false;
@@ -144,8 +143,7 @@ $(function(){
     $('#sign-up-form .close a').click(function(){
       $body.removeClass('sign-up');
       return false;
-      
-    })
+    });
   }
     
   $('#totem').click(function(){
@@ -166,7 +164,8 @@ $(function(){
       // $audio.remove();
     }, 4000, $audio );
 
-    $('#intro h1').text('Beerception').css({ fontSize: '132px' });
+    $('#intro h1').addClass('beerception').text('Beerception');
+    $('#intro .blurb').text('A party within a dream');
   });
   
 });
