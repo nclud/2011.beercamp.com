@@ -450,7 +450,7 @@ a:hover {
 
 /***************** Nav  *****************/
 
-.nav {
+#nav {
   list-style: none;
   margin: 0;
   position: absolute;
@@ -461,7 +461,7 @@ a:hover {
 /*  background: #223;*/
 }
 
-.nav li {
+#nav li {
   float: left;
   margin-right: 2px;
   text-align: center;
@@ -472,7 +472,7 @@ a:hover {
   line-height: 1.4em;
 }
 
-.nav li a {
+#nav li a {
   display: block;
   background: white;
   color: #223;
@@ -489,31 +489,20 @@ a:hover {
   padding: 0.1em 2.0em 0 0.5em;
 }
 
-.nav li a:hover {
+#nav li a:hover {
   background: #B20;
   color: #DD0;
 }
 
-#intro .nav li.intro a,
-#featuring .nav li.featuring a,
-#sponsorz .nav li.sponsorz a,
-#flip-cup .nav li.flip-cup a,
-#sign-up .nav li.sign-up a,
-#teams .nav li.teams a,
-.intro .nav li.intro a,
-.featuring .nav li.featuring a,
-.sponsorz .nav li.sponsorz a,
-.flip-cup .nav li.flip-cup a,
-.sign-up .nav li.sign-up a,
-.teams .nav li.teams a
-{
-  background: #B20;
+#nav li.current a {
+  background: #223;
+  color: #DD0;
 }
 
-#content .nav { display: none; }
-/*#container > .nav { display: none; }*/
+#content #nav { display: none; }
+/*#container > #nav { display: none; }*/
 
-.no-csstransforms .nav {
+.no-csstransforms #nav {
   position: fixed;
   top: 10px;
 }
@@ -1080,7 +1069,7 @@ a:hover {
 
 #content #teams h1 {
   position: relative;
-  top: 30px;
+  top: 40px;
 }
 
 #teams h1 span {
@@ -1092,11 +1081,12 @@ a:hover {
 #teams .team-list {
   position: absolute;
   top: 30px;
-  height: 510px;
-  width: 100%;
+  height: 500px;
+  width: 980px;
   overflow-y: scroll;
   list-style: none;
   margin: 0;
+  border: 2px solid;
 }
 
 #teams .team-list .team {
@@ -1139,10 +1129,22 @@ a:hover {
   font-family: 'Hero', 'Helvetica Neue', Arial, sans-serif;
 }
 
+/***************** INCEPTION *****************/
+
+#limbo {
+  text-align: center;
+}
+
+#totem {
+  display: inline-block;
+  margin-top: 300px;
+}
+
+
 /***************** Scroll Proxy  *****************/
 
 
-.csstransforms #scroll-proxy {
+.csstransforms .no-ios #scroll-proxy {
   height: 5400px;
 }
 
@@ -1243,16 +1245,6 @@ body.sign-up { background-color: #223; }
 .csstransforms .sign-up #content { opacity: 0.3; }
 
 
-/***************** *****************/
-
-#limbo {
-  text-align: center;
-}
-
-#totem {
-  display: inline-block;
-  margin-top: 300px;
-}
 
 
  /*
