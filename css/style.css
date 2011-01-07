@@ -1036,30 +1036,32 @@ a:hover {
 /* scroll bar  
   Thnx Tim Van Damme & http://almaer.com/scrollbar/debug.html */
 
-::-webkit-scrollbar {
+.team-list::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 
-::-webkit-scrollbar-button:start:decrement,
-::-webkit-scrollbar-button:end:increment {
+.team-list::-webkit-scrollbar-button:start:decrement,
+.team-list::-webkit-scrollbar-button:end:increment {
     display: block;
     height: 8px;
-}
-
-::-webkit-scrollbar-button:vertical:increment {
     background-color: #DD0;
 }
 
-::-webkit-scrollbar-track-piece {
+.team-list::-webkit-scrollbar-button:vertical:increment {
+    background-color: #DD0;
+}
+
+.team-list::-webkit-scrollbar-track-piece {
     background-color: white;
     -webkit-border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb {
+.team-list::-webkit-scrollbar-thumb {
     background-color: #223;
     -webkit-border-radius: 4px;
 }
+
 
 
 #teams .team-list .team {
