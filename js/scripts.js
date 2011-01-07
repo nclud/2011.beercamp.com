@@ -17,9 +17,6 @@ var Beercamper = function() {
     '#teams' : 4
   };
   
-  // adjustment for faux 3d
-  this.levelAdjust = Modernizr.csstransforms && !Modernizr.csstransforms3d ? 0.4 : 0;
-  
   this.$window = $(window);
   this.$document = $(document);
   
