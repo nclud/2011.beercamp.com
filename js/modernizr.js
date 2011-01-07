@@ -233,6 +233,26 @@ window.Modernizr = (function(window,document,undefined){
         return !!test_props( props, callback );
     }
     
+    
+    /*
+     * The Modernizr.touch test only indicates if the browser supports
+     *    touch events, which does not necessarily reflect a touchscreen
+     *    device, as evidenced by tablets running Windows 7 or, alas,
+     *    the Palm Pre / WebOS (touch) phones.
+     *    
+     * Additionally, Chrome (desktop) used to lie about its support on this,
+     *    but that has since been rectified: http://crbug.com/36415
+     *    
+     * We also test for Firefox 4 Multitouch Support.
+     *
+     * For more info, see: http://modernizr.github.com/Modernizr/touch.html
+     */
+     
+    tests['touch'] = function() {
+
+        return ('ontouchstart' in window) || testMediaQuery('@media ('+prefixes.join('touch-enabled),(')+'modernizr)');
+
+    };
 
     // documentMode logic from YUI to filter out IE8 Compat Mode
     //   which false positives.

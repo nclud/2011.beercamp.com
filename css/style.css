@@ -297,6 +297,7 @@ body {
   background: #DD0;
   font-family: 'Hero Light', 'Helvetica Neue', Arial, sans-serif;
   color: #223;
+/*  min-width: 1000px;*/
 }
 
 a,
@@ -1145,7 +1146,7 @@ a:hover {
 /***************** Scroll Proxy  *****************/
 
 
-.csstransforms .no-ios #scroll-proxy {
+.csstransforms.no-touch #scroll-proxy {
   height: 5400px;
 }
 
