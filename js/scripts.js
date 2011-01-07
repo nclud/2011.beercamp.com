@@ -72,7 +72,7 @@ Beercamper.prototype.scroll = function( event ) {
 
 
   // change current selection on nav
-  this.currentLevel = Math.round( this.scrolled * this.levels - this.levelAdjust );
+  this.currentLevel = Math.round( this.scrolled * (this.levels-1) );
   
   if ( this.currentLevel !== this.previousLevel && this.$nav ) {
     this.$nav.find('.current').removeClass('current');
@@ -163,12 +163,14 @@ $(function(){
     });
     
     $('#start-sign-up').click(function(){
+      BCXI.proxyScrollTop = BCXI.$window.scrollTop();
       $body.addClass('sign-up');
       return false;
     })
     
     $('#sign-up-form .close a').click(function(){
       $body.removeClass('sign-up');
+      BCXI.$window.scrollTop( BCXI. proxyScrollTop)
       return false;
     });
   }

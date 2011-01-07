@@ -297,7 +297,7 @@ body {
   background: #DD0;
   font-family: 'Hero Light', 'Helvetica Neue', Arial, sans-serif;
   color: #223;
-/*  min-width: 1000px;*/
+  min-width: 1000px;
 }
 
 a,
@@ -1082,18 +1082,48 @@ a:hover {
 #teams .team-list {
   position: absolute;
   top: 30px;
-  height: 506px;
-  width: 986px;
+  height: 510px;
+  width: 100%;
   overflow-y: scroll;
   list-style: none;
   margin: 0;
-  border-top: 2px solid;
-  border-bottom: 2px solid;
+/*  border-top: 2px solid;
+  border-bottom: 2px solid;*/
 }
+
+/* scroll bar  
+  Thnx Tim Van Damme & http://almaer.com/scrollbar/debug.html */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 10px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background-color: #DD0;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: white;
+    -webkit-border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background-color: #223;
+    -webkit-border-radius: 5px;
+}
+
 
 #teams .team-list .team {
   width: 310px;
   margin: 10px;
+/*  height: 400px;*/
 /*  border-top: 10px solid;*/
   
 }
@@ -1146,9 +1176,8 @@ a:hover {
 /***************** Scroll Proxy  *****************/
 
 
-.csstransforms.no-touch #scroll-proxy {
-  height: 5400px;
-}
+.csstransforms.no-touch #scroll-proxy { height: 5400px; }
+.csstransforms.no-touch .sign-up #scroll-proxy { height: 0; }
 
 /***************** Sign Up form  *****************/
 
@@ -1232,7 +1261,8 @@ body {
 
 body.sign-up { background-color: #223; }
 
-.csstransforms #content {
+.csstransforms #content,
+.csstransforms #nav {
   -webkit-transition: opacity 0.5s;
      -moz-transition: opacity 0.5s;
        -o-transition: opacity 0.5s;
@@ -1244,7 +1274,12 @@ body.sign-up { background-color: #223; }
   display: block;
 }
 
-.csstransforms .sign-up #content { opacity: 0.3; }
+.csstransforms .sign-up #content,
+.csstransforms .sign-up #nav { 
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 
 
 
