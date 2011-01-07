@@ -84,17 +84,11 @@ Beercamper.prototype.scroll = function( event ) {
 };
 
 Beercamper.prototype.transformScroll = function( scroll ) {
-  // console.log('transform scroll ', scroll )
   this.$content.css( this.getScrollTransform( scroll ) );
-};
-
-Beercamper.prototype.click = function( event ) {
-  this.navCursorStart( event.target );
 };
 
 // handle click events
 Beercamper.prototype.click = function( event ) {
-
 
   //  nav click event
   var targetLevel = this.levelGuide[ event.target.getAttribute('href') ],
@@ -104,8 +98,8 @@ Beercamper.prototype.click = function( event ) {
     this.$content.addClass('transitions-on');
   
     this.content.addEventListener( 'webkitTransitionEnd', this, false );
-    this.content.addEventListener( 'transitionend', this, false );
     this.content.addEventListener( 'oTransitionEnd', this, false );
+    this.content.addEventListener( 'transitionend', this, false );
   }
 
 
@@ -178,7 +172,8 @@ $(function(){
       return false;
     });
   }
-    
+   
+  //  INCEPTION
   $('#totem').click(function(){
     var $audio = $('<audio />', { 
       autoPlay : 'autoplay'
@@ -194,7 +189,7 @@ $(function(){
 
     $body.append( $audio );
     setTimeout( function( $audio ){
-      // $audio.remove();
+      $audio.remove();
     }, 4000, $audio );
 
     $('#intro h1').addClass('beerception').text('Beerception');

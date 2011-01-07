@@ -1081,12 +1081,13 @@ a:hover {
 #teams .team-list {
   position: absolute;
   top: 30px;
-  height: 500px;
-  width: 980px;
+  height: 506px;
+  width: 986px;
   overflow-y: scroll;
   list-style: none;
   margin: 0;
-  border: 2px solid;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
 }
 
 #teams .team-list .team {
@@ -1109,9 +1110,9 @@ a:hover {
   font-weight: normal;
   font-size: 26px;
   line-height: 1.0em;
-  background: #223;
-  color: #DD0;
-  padding: 5px;
+  border-top: 8px solid;
+  padding-top: 5px;
+  font-family: 'Hero', 'Helvetica Neue', Arial, sans-serif;
   text-transform: uppercase;
 }
 
