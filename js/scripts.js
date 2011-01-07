@@ -1,4 +1,5 @@
-
+// BeerCamp at SXSW 2011
+// by nclud
 
 
 // BeerCamp '11 Global constructor
