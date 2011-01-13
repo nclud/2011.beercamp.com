@@ -482,7 +482,7 @@ a:hover {
   white-space: pre;
 }
 
-#intro .date,
+#intro time,
 #intro .location {
   position: absolute;
   width: 330px;
@@ -491,25 +491,25 @@ a:hover {
 
 /* Date */
 
-#intro .date time {
+#intro time span {
   display: block;
   text-align: center;
 }
 
-#intro .date .day-of-week {
+#intro time .day-of-week {
   text-transform: uppercase;
   font-size: 76px;
   line-height: 0.9em;
 }
 
-#intro .date .day {
+#intro time .day {
   font-size: 64px;
   text-transform: uppercase;
   font-family: 'Hero', 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.0em;
 }
 
-#intro .date .day i {
+#intro time .day i {
   font-style: normal;
   background: #223;
   font-size: 0.9em;
@@ -528,7 +528,7 @@ a:hover {
 
 }
 
-#intro .date .year {
+#intro time .year {
   font-size: 20px;
   text-transform: uppercase;
   line-height: 0.8em;
@@ -537,7 +537,7 @@ a:hover {
   font-family: 'Hero', 'Helvetica Neue', Arial, sans-serif;
 }
 
-#intro .date .time {
+#intro time .time {
   font-size: 32px;
   line-height: 1.6em;
   letter-spacing: 0.05em;
