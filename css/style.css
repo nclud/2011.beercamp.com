@@ -291,26 +291,6 @@ a:hover {
   position: absolute;
 }
 
-.csstransforms #content section,
-.csstransforms #content,
-.csstransforms #environment {
-  -webkit-transform-origin: center 450px;
-     -moz-transform-origin: center 450px;
-      -ms-transform-origin: center 450px;
-       -o-transform-origin: center 450px;
-          transform-origin: center 450px;
-  
-}
-
-
-/*.csstransforms #content {
-  -webkit-transition: -webkit-transform 1s;
-     -moz-transition:    -moz-transform 1s;
-       -o-transition:      -o-transform 1s;
-          transition:         transform 1s;
-}
-*/
-
 .csstransforms #content.transitions-on {
   -webkit-transition: -webkit-transform 1s;
      -moz-transition:    -moz-transform 1s;
@@ -319,6 +299,16 @@ a:hover {
 }
 
 /***************** Faux 3d  *****************/
+
+.faux3d #content section,
+.faux3d #content,
+.faux3d #environment {
+  -webkit-transform-origin: center 450px;
+     -moz-transform-origin: center 450px;
+      -ms-transform-origin: center 450px;
+       -o-transform-origin: center 450px;
+          transform-origin: center 450px;
+}
 
 .faux3d #featuring {
   -webkit-transform: scale(0.3333);
@@ -366,7 +356,7 @@ a:hover {
 
 .csstransforms3d #environment {
   -webkit-perspective: 500;
-  -webkit-perspective-origin: center center;
+  -webkit-perspective-origin: center 450px;
   width: 100%;
   height: 540px;
 }
