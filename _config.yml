@@ -2,7 +2,7 @@
 name: BeerCamp at SXSW 2011
 
 teams:
-  - name: nclud One
+  - name: nclud
     players:
       - name: Martin Ringlein
         twitter : martymadrid
@@ -14,47 +14,47 @@ teams:
         twitter: btj
       - name: Brian Singer
   
-  - name: Nclud 2 For Realz. Hide Yo Kids. Hide Yo Wife
-    players:
-      - name: Tom Gianttassio
-        twitter: attasi
-      - name: David DeSandro
-        twitter: desandro
-      - name: Dan Drinkard
-        twitter: dandrinkard
-      - name: Doris Steere
-        twitter: steeredc
-      - name: Michael Dick
-        twitter: michaeldick
-
-  - name: YayQuery Sparkle Force
-    players:
-    - name: Commodore General Alex Sexton
-      twitter: slexaxton
-    - name: Brigadier 1st Class Adam J. Sontag
-      twitter: ajpiano
-    - name: Paul Irish
-      twitter: paul_irish
-    - name: Rebecca Murphey
-      twitter: rmurphey
-    - name: John Resig in spirit
-      twitter: jresig
-
-  - name: Hanerinoids
-    players: 
-      - name: Patrick Haney
-        twitter: notasausage
-      - name: Jenna Marino
-        twitter: jennamarino
-      - name: John Doe
-      - name: Jane Doe
-      - name: Jacob D'oh!
-
-  - name: The cast of Blindness
-    players:
-      - name: Mark Ruffalo
-      - name: Julianne Moore
-      - name: Danny Glover
-      - name: Gael García Bernal
-      - name: Don McKellar
+  # - name: Nclud 2 For Realz. Hide Yo Kids. Hide Yo Wife
+  #   players:
+  #     - name: Tom Gianttassio
+  #       twitter: attasi
+  #     - name: David DeSandro
+  #       twitter: desandro
+  #     - name: Dan Drinkard
+  #       twitter: dandrinkard
+  #     - name: Doris Steere
+  #       twitter: steeredc
+  #     - name: Michael Dick
+  #       twitter: michaeldick
+  # 
+  # - name: YayQuery Sparkle Force
+  #   players:
+  #   - name: Commodore General Alex Sexton
+  #     twitter: slexaxton
+  #   - name: Brigadier 1st Class Adam J. Sontag
+  #     twitter: ajpiano
+  #   - name: Paul Irish
+  #     twitter: paul_irish
+  #   - name: Rebecca Murphey
+  #     twitter: rmurphey
+  #   - name: John Resig in spirit
+  #     twitter: jresig
+  # 
+  # - name: Hanerinoids
+  #   players: 
+  #     - name: Patrick Haney
+  #       twitter: notasausage
+  #     - name: Jenna Marino
+  #       twitter: jennamarino
+  #     - name: John Doe
+  #     - name: Jane Doe
+  #     - name: Jacob D'oh!
+  # 
+  # - name: The cast of Blindness
+  #   players:
+  #     - name: Mark Ruffalo
+  #     - name: Julianne Moore
+  #     - name: Danny Glover
+  #     - name: Gael García Bernal
+  #     - name: Don McKellar
 
