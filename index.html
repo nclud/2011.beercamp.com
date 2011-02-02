@@ -1,5 +1,7 @@
 ---
 layout: nil
+css_version: '06'
+script_version: '05'
 ---
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
@@ -22,8 +24,8 @@ layout: nil
   
   
      ###    ########     ######  ##     ##  ######  ##      ##     #######    #####     ###     ###   
-   ##   ##     ##       ##,,,,,    ## ##   ##,,,,,  ##  ##  ##      ,,,,,## ##     ##    ##      ##   
-  #########    ##             ##   ## ##         ## ##  ##  ##    ##        ##     ##    ##      ##   
+   ##   ##     ##       ##.....    ## ##   ##.....  ##  ##  ##      .....## ##     ##    ##      ##   
+  #########    ##         ````##   ## ##     ````## ##  ##  ##    ##`````   ##     ##    ##      ##   
   ##     ##    ##        ######  ##     ##  ######   ###  ###     #########   #####    ######  ######
   
   by nclud
@@ -39,7 +41,7 @@ layout: nil
   <meta name="description" content="An awesome party for web folk and classy people. Monday, March 14 2011 at Emo's 603 Red River St. Austin, TX" />
   <meta name="author" content="nclud" />
   
-  <link rel="stylesheet" href="css/style.css?v05" />
+  <link rel="stylesheet" href="css/style.css?v{{ page.css_version }}" />
   
   <script src="js/modernizr.js"></script>
 
@@ -283,8 +285,14 @@ layout: nil
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
 <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
-<script src="js/scripts.js?v04"></script>
-  
+<script src="js/scripts.js?v{{ page.script_version }}"></script>
+
+<script>
+  var _gaq=[['_setAccount','UA-6925512-7'],['_setDomainName', 'beercamp.com'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
   
   
 </body>
