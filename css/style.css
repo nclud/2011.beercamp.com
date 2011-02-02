@@ -595,6 +595,28 @@ a:hover {
   letter-spacing: 1px;
 }
 
+
+/***************** Credit  *****************/
+
+#credit {
+  position: absolute;
+  left: 405px;
+  bottom: -40px;
+  width: 180px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  font-family: 'Hero', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#credit a {
+  color: #223; 
+  display: block;
+  padding-left: 10px;
+  background: url('../img/sponsors.png') -130px -566px;
+}
+#credit a:hover { background-color: white;}
+
 /***************** Featuring *****************/
 
 #content #featuring h1 {
@@ -1220,7 +1242,6 @@ body.sign-up { background-color: #223; }
   opacity: 0.3;
   pointer-events: none;
 }
-
 
 
 
