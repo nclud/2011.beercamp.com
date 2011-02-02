@@ -14,6 +14,15 @@ teams:
         twitter: btj
       - name: Brian Singer
   
+  - name: 2 girls, 3 guys and a cup.
+    players:
+      - name: Kerry Gunther
+        twitter: kerrygunther
+      - name: Jim Basio
+      - name: Tanya Bodnya
+      - name: Dario Tadic
+      - name: Nastya Loskutova
+  
   # - name: Nclud 2 For Realz. Hide Yo Kids. Hide Yo Wife
   #   players:
   #     - name: Tom Gianttassio
@@ -26,19 +35,6 @@ teams:
   #       twitter: steeredc
   #     - name: Michael Dick
   #       twitter: michaeldick
-  # 
-  # - name: YayQuery Sparkle Force
-  #   players:
-  #   - name: Commodore General Alex Sexton
-  #     twitter: slexaxton
-  #   - name: Brigadier 1st Class Adam J. Sontag
-  #     twitter: ajpiano
-  #   - name: Paul Irish
-  #     twitter: paul_irish
-  #   - name: Rebecca Murphey
-  #     twitter: rmurphey
-  #   - name: John Resig in spirit
-  #     twitter: jresig
   # 
   # - name: Hanerinoids
   #   players: 
