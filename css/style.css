@@ -771,10 +771,11 @@ a:hover {
 
 #sponsorz .spnsr-list li a:hover { background-color: white; }
 
-#sponsorz .victory          { background-position: 0      0; }
-#sponsorz .nclud            { background-position: 0 -100px; }
-#sponsorz .pruf             { background-position: 0 -200px; }
-#sponsorz .browser-media    { background-position: 0 -300px; }
+#sponsorz .victory       { background-position: 0      0; }
+#sponsorz .nclud         { background-position: 0 -100px; }
+#sponsorz .pruf          { background-position: 0 -200px; }
+#sponsorz .browser-media { background-position: 0 -300px; }
+#sponsorz .hanerino      { background-position: 0 -400px; }
 
 
 #sponsorz .spnsr-list li.open {
