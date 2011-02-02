@@ -2,17 +2,17 @@
 name: BeerCamp at SXSW 2011
 
 teams:
-  - name: nclud
-    players:
-      - name: Martin Ringlein
-        twitter : martymadrid
-      - name: Alex Giron
-        twitter: alexgiron
-      - name: Lauren Moon
-        twitter: laurenmoon
-      - name: Brandon Jones
-        twitter: btj
-      - name: Brian Singer
+  # - name: nclud
+  #   players:
+  #     - name: Martin Ringlein
+  #       twitter : martymadrid
+  #     - name: Alex Giron
+  #       twitter: alexgiron
+  #     - name: Lauren Moon
+  #       twitter: laurenmoon
+  #     - name: Brandon Jones
+  #       twitter: btj
+  #     - name: Brian Singer
   
   - name: 2 girls, 3 guys and a cup.
     players:
@@ -22,6 +22,19 @@ teams:
       - name: Tanya Bodnya
       - name: Dario Tadic
       - name: Nastya Loskutova
+  
+  - name: The Irish Hooters
+    players:
+      - name: Patrick Haney
+        twitter: notasausage
+      - name: J Cornelius
+        twitter: jc
+      - name: Matt Downey
+        twitter: mattdowney
+      - name: Jenna Marino
+        twitter: jennamarino
+      - name: Adam Little
+  
   
   # - name: Nclud 2 For Realz. Hide Yo Kids. Hide Yo Wife
   #   players:
@@ -36,16 +49,7 @@ teams:
   #     - name: Michael Dick
   #       twitter: michaeldick
   # 
-  # - name: Hanerinoids
-  #   players: 
-  #     - name: Patrick Haney
-  #       twitter: notasausage
-  #     - name: Jenna Marino
-  #       twitter: jennamarino
-  #     - name: John Doe
-  #     - name: Jane Doe
-  #     - name: Jacob D'oh!
-  # 
+  #
   # - name: The cast of Blindness
   #   players:
   #     - name: Mark Ruffalo
