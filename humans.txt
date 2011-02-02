@@ -1,1 +1,33 @@
-see humans.mdown
+BeerCamp at SXSW 2011
+=====================
+
+## Team
+
+[**nclud**](http://nclud.com)
+
+**David DeSandro** - Front-end development
+
+## Site
+
+Built with [Jekyll](http://jekyllrb.com)
+
+Served via [GitHub Pages](http://pages.github.com)
+
+[Source available on GitHub](https://github.com/nclud/2011.beercamp.com)
+
+Fonts by [Fontfabric](http://fontfabric.com/)
+
+Inception audio file and audio script from [Dave Pedu](http://inception.davepedu.com/noflash.html)
+
+## Features
+
+The site has 3 modes, depending on which features are supported by the users browser:
+
++ CSS 3D transforms : Sections are arranged one behind another in 3D space. 
+User scrolls _through_ the sections.  For Safari, iOS, and Chrome if 
+[GPU Accelerated Composited](http://dropshado.ws/post/2744575024/google-chrome-labs) is enabled
+
++ CSS 2D transform : Sections are arranged one inside another, using scale transform.  
+User scrolls _in to_ the sections, sort like zooming in. For Firefox, Chrome, Opera. 
+
++ Plain ol' site : Sections are arranged vertically, like a normal site. For lesser browsers.
