@@ -79,7 +79,15 @@ teams:
       - name: Justin Fae
       - name: Chang Cho
 
-
+  - name: Loch Ness
+    players:
+      - name: Rob Sternenberg
+        twitter: foodtrailersatx
+      - name: Tony Yamanaka
+      - name: Christina Conklin
+      - name: Darrin Jensen
+      - name: Jason Gray
+  
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
