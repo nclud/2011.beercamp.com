@@ -662,11 +662,14 @@ a:hover {
   padding-top: 0.4em;
 }
 
+#featuring .feature p strong { display: block; }
+
 #featuring .feature p strong span {
   font-weight: normal;
   font-size: 58px;
   text-transform: uppercase;
   line-height: 1.1em;
+  display: block;
 }
 
 #featuring .feature p strong span.victory { font-size: 72px; }
@@ -677,7 +680,16 @@ a:hover {
   right: 0;
 }
 
-#featuring .music p strong span { opacity: 0.2; }
+#featuring .feature p strong span a {
+  font-family: 'Hero', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#featuring .music p .artist { border-top: 2px solid; }
+
+#featuring .music p strong { padding: 3px 0; }
+
+#featuring .music p .artist { font-size: 42px; }
+#featuring .music p .link { font-size: 20px; }
 
 #featuring .links {
   position: absolute;
