@@ -227,7 +227,7 @@ script_version: '05'
           <h1><span class="tournament"><span class="tourn">Tourn</span><span class="ament">ament</span></span> <span class="teams-title">Teams</span></h1>
 
           <ul class="team-list">
-          {% for team in site.teams %}
+          {% for team in site.teams reversed %}
             <li class="team {% cycle 'team-a', 'team-b' %}">
               <h2>{{ team.name }}</h2>
               <ul class="player-list">
