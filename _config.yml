@@ -59,6 +59,17 @@ teams:
       - name: Derek Richmond
       - name: Peter Albrycht
   
+  - name: London calling
+    players:
+      - name: Charlie Osmond
+        twitter: cosmond
+      - name: Alliott Cole
+        twitter: alliott
+      - name: Ben Barnes
+      - name: Pete Cherry
+      - name: Jacob Kestner
+        twitter: jacobkestner
+  
 # - name: TEAMNAME
 #   players:
 #     - name: PLAYER1
