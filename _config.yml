@@ -118,6 +118,29 @@ teams:
       - name: Alex Pitkin
         twitter: Pitkin
   
+  - name: Beadenomics
+    players:
+      - name: Brian Cmiel
+        twitter: Fat_Brian
+      - name: Rickey Brown
+        twitter: Dokopuffs
+      - name: Derek Knechtel
+      - name: Dana Beristain
+      - name: Anthony Thai
+  
+  - name: Martin&rsquo;s Mom
+    players:
+      - name: Kevin Smith
+        twitter: ksmith
+      - name: Greg Robleto
+        twitter: robleto
+      - name: Doug Dosberg
+        twitter: dosberg
+      - name: Patrick Woods
+        twitter: hakjoon
+      - name: Justin S.
+        twitter: joeks
+  
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
