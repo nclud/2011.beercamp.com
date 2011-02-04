@@ -88,6 +88,36 @@ teams:
       - name: Darrin Jensen
       - name: Jason Gray
   
+  - name: Das Boots
+    players:
+      - name: Juan Moran
+      - name: Ralf Garcia
+      - name: Remington Ruiz
+      - name: Tyler McEwen
+      - name: Jason Fialkoff
+  
+  - name: Cinco Trouble
+    players:
+      - name: Sandra Fabian
+        twitter: sanfab44
+      - name: Jesse Ramirez
+      - name: Charles Williams
+      - name: Amy Zamora
+      - name: Gina Romero
+  
+  - name: Who's cider you on?
+    players:
+      - name: Ian Ochiltree
+        twitter: ianochiltree
+      - name: Ally Stuart
+        twitter: EtAlly
+      - name: Matt Golding
+        twitter: mattgolding
+      - name: Chris Quigley
+        twitter: rubber_republic
+      - name: Alex Pitkin
+        twitter: Pitkin
+  
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
