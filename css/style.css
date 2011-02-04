@@ -1098,9 +1098,7 @@ a:hover {
 #teams .team-list .team {
   width: 310px;
   margin: 10px;
-/*  height: 400px;*/
-/*  border-top: 10px solid;*/
-  
+  text-align: center;
 }
 #teams .team-list .team-a { 
   float: left; 
@@ -1109,7 +1107,6 @@ a:hover {
 #teams .team-list .team-b { 
   float: right; 
   clear: right; 
-  text-align: right;
 }
 
 #teams .team-list .team h2 {
@@ -1134,6 +1131,7 @@ a:hover {
 
 #teams .team-list .team .player a {
   font-family: 'Hero', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
 }
 
 /***************** INCEPTION *****************/
