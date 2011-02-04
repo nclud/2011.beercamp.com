@@ -29,6 +29,8 @@ var Beercamper = function() {
   
 };
 
+// enables constructor to be used within event listener
+// like obj.addEventListener( eventName, this, false )
 Beercamper.prototype.handleEvent = function( event ) {
   if ( this[event.type] ) {
     this[event.type](event);
@@ -36,6 +38,7 @@ Beercamper.prototype.handleEvent = function( event ) {
 };
 
 Beercamper.prototype.getScroll2DTransform = function( scroll ) {
+  // 2D scale is exponential
   var scale = Math.pow( 3, scroll * (this.levels - 1) );
       prop = 'scale(' + scale + ')',
       style = {
@@ -49,9 +52,12 @@ Beercamper.prototype.getScroll2DTransform = function( scroll ) {
 
 Beercamper.prototype.getScroll3DTransform = function( scroll ) {
   var z = ( scroll * (this.levels - 1) * this.distance3d ),
+      // how close are we to the nearest level
       leveledZ = this.distance3d / 2 - Math.abs( ( z % this.distance3d ) - this.distance3d / 2 ),
       style;
   
+  // if close to nearest level, 
+  // ensures that text doesn't get fuzzy after nav is clicked
   if ( leveledZ < 5 ) {
     z = Math.round( z / this.distance3d ) * this.distance3d;
   }
@@ -64,10 +70,10 @@ Beercamper.prototype.getScroll3DTransform = function( scroll ) {
 
 Beercamper.prototype.scroll = function( event ) {
 
+  // normalize scroll value from 0 to 1
   this.scrolled = this.$window.scrollTop() / ( this.$document.height() - this.$window.height() );
 
   this.transformScroll( this.scrolled );
-
 
   // change current selection on nav
   this.currentLevel = Math.round( this.scrolled * (this.levels-1) );
@@ -81,28 +87,31 @@ Beercamper.prototype.scroll = function( event ) {
   
 };
 
+// where the magic happens
+// applies transform to content from position of scroll
 Beercamper.prototype.transformScroll = function( scroll ) {
   this.$content.css( this.getScrollTransform( scroll ) );
 };
 
 // handle click events
 Beercamper.prototype.click = function( event ) {
-
-  //  nav click event
+  //  get scroll based on href of clicked nav item
   var targetLevel = this.levelGuide[ event.target.getAttribute('href') ],
       scroll = targetLevel / (this.levels-1);
 
+  // turn on transitions and add event listeners for its end
   if ( Modernizr.csstransitions ) {
     this.$content.addClass('transitions-on');
-  
     this.content.addEventListener( 'webkitTransitionEnd', this, false );
     this.content.addEventListener( 'oTransitionEnd', this, false );
     this.content.addEventListener( 'transitionend', this, false );
   }
 
-
+  // set scrollbar position
+  // this will trigger window scroll event -> Beercamper.prototype.scroll
   this.$window.scrollTop( scroll * ( this.$document.height() - this.$window.height() ) );
 
+  // iOS doesn't have scrollbar, so we have to manually trigger it
   if ( this.isIOS ) {
     this.transformScroll( scroll );
   }
@@ -110,7 +119,6 @@ Beercamper.prototype.click = function( event ) {
   event.preventDefault();
   
 };
-
 
 
 Beercamper.prototype.webkitTransitionEnd = function( event ) {
@@ -125,6 +133,7 @@ Beercamper.prototype.oTransitionEnd = function( event ) {
   this.transitionEnded( event );
 };
 
+// disables transition after nav click
 Beercamper.prototype.transitionEnded = function( event ) {
   this.$content.removeClass('transitions-on');
   this.content.removeEventListener( 'webkitTransitionEnd', this, false );
@@ -142,13 +151,9 @@ BCXI.isIOS = !!('createTouch' in document);
 
 $(function(){
   
-
-  
-  
   BCXI.$content = $('#content');
   BCXI.content = document.getElementById('content');
   BCXI.$nav = $('#nav');
-  
   
   $body = $('body');
   
@@ -161,6 +166,7 @@ $(function(){
     });
     
     $('#start-sign-up').click(function(){
+      // save position of scroll
       BCXI.proxyScrollTop = BCXI.$window.scrollTop();
       $body.addClass('sign-up');
       return false;
@@ -168,6 +174,7 @@ $(function(){
     
     $('#sign-up-form .close a').click(function(){
       $body.removeClass('sign-up');
+      // set previous scroll position
       BCXI.$window.scrollTop( BCXI. proxyScrollTop)
       return false;
     });
