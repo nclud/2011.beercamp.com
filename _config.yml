@@ -3,7 +3,7 @@ name: BeerCamp at SXSW 2011
 
 teams:
   
-  - name: '2 girls, 3 guys and a cup.'
+  - name: '2 girls, 3 guys and a&nbsp;cup.'
     players:
       - name: Kerry Gunther
         twitter: kerrygunther
@@ -140,6 +140,31 @@ teams:
         twitter: hakjoon
       - name: Justin S.
         twitter: joeks
+  
+  - name: Designated Drinkers
+    players:
+      - name: M. Jackson Wilkinson
+        twitter: whafro
+      - name: Samara Strauss
+        twitter: sammaarra
+      - name: Heather Ritchie
+        twitter: heatheranne
+      - name: Rich Pearson
+        twitter: richiepear
+      - name: Keith Muth
+        twitter: keithmuth
+  
+  - name: Liver Let Die
+    players:
+      - name: Derek Bender
+        twitter: derekbender
+      - name: Elizabeth Baranik
+        twitter: elizabethb
+      - name: Derek Kohn
+        twitter: makemealive_dk
+      - name: Matt Dorst
+      - name: Eric Marden
+        twitter: xentek
   
   # - name: TEAMNAME
   #   players:
