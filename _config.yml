@@ -166,6 +166,28 @@ teams:
       - name: Eric Marden
         twitter: xentek
   
+  - name: The Slow Children
+    players:
+      - name: Erik Hay
+        twitter: erikthehay
+      - name: Sam Granleese
+        twitter: granleese
+      - name: Brian Merrifield
+        twitter: bboybri
+      - name: Damien Damjanovski
+      - name: Barrie Seppings
+  
+  - name: Fred Durst Society of the Humanities and Arts
+    players:
+      - name: Michele Cummins
+        twitter: SoyMichelada
+      - name: Kollin Brandenburg
+        twitter: HeyYouUpFront
+      - name: Brooke Marcus
+        twitter: YuppieBrooke
+      - name: Alicia Saba
+      - name: Jake Balcom
+
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
