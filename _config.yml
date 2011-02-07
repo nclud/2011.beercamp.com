@@ -208,7 +208,7 @@ teams:
       - name: Ajit Varma
       - name: Jesse Shieh
   
-  - name: move
+  - name: move &lt;/aside&gt;
     players:
       - name: Mike Brenner
         twitter: MikeMakes
