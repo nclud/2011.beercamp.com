@@ -188,6 +188,15 @@ teams:
       - name: Alicia Saba
       - name: Jake Balcom
 
+  - name: Stellas
+    players:
+      - name: Chelsey Salisbury
+        twitter: chelllaaaa
+      - name: Roslynn Castillo
+      - name: Elizabeth Davis
+      - name: Jennifer Alt
+      - name: Jennifer Reid
+  
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
