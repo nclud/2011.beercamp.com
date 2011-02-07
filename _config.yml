@@ -197,6 +197,17 @@ teams:
       - name: Jennifer Alt
       - name: Jennifer Reid
   
+  - name: 10/10s
+    players:
+      - name: Rohan Seth
+        twitter: rohanseth
+      - name: Carlos Whitt
+        twitter: carloswhitt
+      - name: Sara Haider
+        twitter: pandemona
+      - name: Ajit Varma
+      - name: Jesse Shieh
+  
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
