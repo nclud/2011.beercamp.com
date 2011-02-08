@@ -220,6 +220,30 @@ teams:
         twitter: lokeshdhakar
       - name: Todd Marks
   
+  - name: Canadian Livers in Training
+    players:
+      - name: Erin Bury
+        twitter: erinbury
+      - name: Lee Dale
+        twitter: smack416
+      - name: Jay Goldman
+        twitter: jaygoldman
+      - name: Matt Rintoul
+        twitter: matt416
+      - name: Kagey Davis
+        twitter: kgdavis
+  
+  - name: Flipsburgh
+    players:
+      - name: Sarah Lamont
+        twitter: seriflafont
+      - name: Emily Brewer
+        twitter: ebrewer
+      - name: Jennifer McLean
+        twitter: jennymclean
+      - name: Guy Gould-Davies
+      - name: Andrew Van Hook
+  
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
