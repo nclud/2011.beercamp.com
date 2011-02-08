@@ -254,10 +254,21 @@ teams:
       - name: Mike Schneider
         twitter: schneidermike
       - name: Mike Pascucci
-        twitter: mattsolar
-      - name: Matt Solar
         twitter: mikepascucci
+      - name: Matt Solar 
+        twitter: mattsolar
       
+  - name: The yayQuery Sparkleforce
+    players:
+      - name: Alex Sexton
+        twitter: SlexAxton
+      - name: Paul Irish
+        twitter: paul_irish
+      - name: Ben Weatherman
+        twitter: benweatherman
+      - name: Jon Loyens
+      - name: Aaron Forsander 
+  
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
@@ -270,4 +281,3 @@ teams:
   #       twitter: TWITTER4
   #     - name: PLAYER5
   #       twitter: TWITTER5
-  
