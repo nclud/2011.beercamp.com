@@ -245,6 +245,17 @@ teams:
       - name: Guy Gould-Davies
       - name: Andrew Van Hook
   
+  - name: Craft Beer Social + Belching Monkey = The Waterboys
+    players:
+      - name: Jim Storer
+        twitter: jimstorer
+      - name: Derek Peplau
+        twitter: peplau
+      - name: Mike Schneider
+        twitter: schneidermike
+      - name: Mike Pascucci
+      - name: Matt Solar
+
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
