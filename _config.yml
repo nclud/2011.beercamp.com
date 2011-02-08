@@ -150,10 +150,10 @@ teams:
         twitter: sammaarra
       - name: Heather Ritchie
         twitter: heatheranne
-      - name: Rich Pearson
-        twitter: richiepear
-      - name: Keith Muth
-        twitter: keithmuth
+      - name: Sachin Agarwal
+        twitter: a4agarwal
+      - name: Vince Chu
+        twitter: vincentchu
   
   - name: Liver Let Die
     players:
@@ -269,6 +269,26 @@ teams:
       - name: Jon Loyens
       - name: Aaron Forsander 
   
+  - name: 'Saatchi &amp; Shortlist Los Angeles'
+    players:
+      - name: Justin Bain
+        twitter: jbain75
+      - name: Charlie McBrearty
+        twitter: shortlister
+      - name: Tanya Lesieur
+        twitter: tanyalesieur
+      - name: Vaness McLean
+      - name: David Evans
+        twitter: spyglasscircle
+
+  - name: Team Throat Punch
+    players:
+      - name: Todd Bayliss
+      - name: Stephanie Hay
+      - name: Doug Avery
+      - name: Keith Muth
+      - name: DJ Tanner
+
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
