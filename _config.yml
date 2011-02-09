@@ -289,6 +289,28 @@ teams:
       - name: Keith Muth
       - name: DJ Tanner
 
+  - name: SD Mafia
+    players:
+      - name: Chris McCann
+        twitter: mccannatron
+      - name: Brendan McManus
+        twitter: founderb
+      - name: Gagan Biyani
+        twitter: gaganbiyani
+      - name: Jessica Ford
+      - name: Matt Sandler
+
+  - name: Nerds in Herds
+    players:
+      - name: DJ Saul
+        twitter: darienjay100
+      - name: Audrey Matthias
+        twitter: amatthias
+      - name: Zvi Band
+        twitter: skeevis
+      - name: Dan Dzombak
+      - name: Zach Goodwin
+  
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
