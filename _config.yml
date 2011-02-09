@@ -311,6 +311,17 @@ teams:
       - name: Dan Dzombak
       - name: Zach Goodwin
   
+  - name: Geeks Adventure Club
+    players:
+      - name: Antoine Butler
+        twitter: aebsr
+      - name: Andrew Cohen
+        twitter: cohenspire
+      - name: Corey Greeneltch
+        twitter: blanksky
+      - name: Reid Williams
+      - name: Stuart Kershaw
+
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
