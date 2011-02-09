@@ -322,6 +322,16 @@ teams:
       - name: Reid Williams
       - name: Stuart Kershaw
 
+  - name: The PR&rsquo;UF is on fire
+    players:
+      - name: Varick Rosete
+        twitter: varick
+      - name: Dennis Eusebio
+        twitter: thoughtntheory
+      - name: Pete Cochrane
+      - name: Jen Hyde
+      - name: Bruce Wayne
+
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
