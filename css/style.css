@@ -725,6 +725,7 @@ a:hover {
 }
 
 #featuring .blurb {
+  font-family: 'Hero', 'Helvetica Neue', Arial, sans-serif;
   width: 310px;
   position: absolute;
   margin: 0 10px;
@@ -732,9 +733,25 @@ a:hover {
   top: 170px;
   line-height: 1.4em;
   text-align: justify;
-  font-size: 16px;
+  font-size: 13px;
 }
 
+#featuring .blurb p {
+  margin-bottom: 10px;
+}
+
+#featuring .blurb .badge {
+  font-size: 20px; 
+  text-align: center;
+  line-height: 32px;
+  background: #223;
+  color: #DD0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
+          border-radius: 16px;
+}
 
 
 
