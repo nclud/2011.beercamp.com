@@ -285,10 +285,15 @@ teams:
   - name: Team Throat Punch
     players:
       - name: Todd Bayliss
+        twitter: dillisquid
       - name: Stephanie Hay
+        twitter: steph_hay
       - name: Doug Avery
+        twitter: averyvery
       - name: Keith Muth
-      - name: DJ Tanner
+        twitter: keithmuth
+      - name: Chris Castiglione
+        twitter: castig
 
   - name: SD Mafia
     players:
