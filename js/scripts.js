@@ -96,7 +96,8 @@ Beercamper.prototype.transformScroll = function( scroll ) {
 // handle click events
 Beercamper.prototype.click = function( event ) {
   //  get scroll based on href of clicked nav item
-  var targetLevel = this.levelGuide[ event.target.getAttribute('href') ],
+  var hash = event.target.hash || event.target.parentNode.hash,
+      targetLevel = this.levelGuide[ hash ],
       scroll = targetLevel / (this.levels-1);
 
   // turn on transitions and add event listeners for its end
@@ -163,20 +164,6 @@ $(function(){
   if ( Modernizr.csstransforms ) {
     $('.page-nav').each(function(){
       this.addEventListener( 'click', BCXI, false );
-    });
-    
-    $('#start-sign-up').click(function(){
-      // save position of scroll
-      BCXI.proxyScrollTop = BCXI.$window.scrollTop();
-      $body.addClass('sign-up');
-      return false;
-    })
-    
-    $('#sign-up-form .close a').click(function(){
-      $body.removeClass('sign-up');
-      // set previous scroll position
-      BCXI.$window.scrollTop( BCXI. proxyScrollTop)
-      return false;
     });
   }
    

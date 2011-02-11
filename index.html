@@ -202,7 +202,7 @@ script_version: '06'
           <div class="copy">
             <h3>Get ready for battle.</h3>
             <p>This year, the BeerCamp competition will take form in a flip cup tournament.</p>
-            <p>To compete, you'll need to make a team of five players (no more, no less).</p>
+            <p>Team registration is now complete.</p>
             <p>Each member of the winning team will walk away with a Flip HD Video Camera.</p>
           </div>
           
@@ -223,7 +223,7 @@ script_version: '06'
           </div>
 
           <div class="arrow">
-            <a id="start-sign-up" href="#sign-up-form"><span class="team">Team</span> <span class="sign-up">sign up</span></a>
+            <a id="start-sign-up" href="#teams" class="page-nav"><span class="team">View</span> <span class="sign-up">teams</span></a>
           </div>
           
           
@@ -234,7 +234,7 @@ script_version: '06'
           <h1><span class="tournament"><span class="tourn">Tourn</span><span class="ament">ament</span></span> <span class="teams-title">Teams</span></h1>
 
           <ul class="team-list">
-          {% for team in site.teams reversed %}
+          {% for team in site.teams %}
             <li class="team {% cycle 'team-a', 'team-b' %}">
               <h2>{{ team.name }}</h2>
               <ul class="player-list">
@@ -259,26 +259,7 @@ script_version: '06'
         
       </div> <!-- #content -->
 
-
-      
     </div> <!-- #environment -->
-    
-    <div id="sign-up-form">
-      <h2>Team Sign Up</h2>
-      <div class="close"><a href="#close" title="Close">&times;</a></div>
-      <script>
-        var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
-      <script>
-        var q7x3p3 = new WufooForm();
-        q7x3p3.initialize({
-        'userName':'daveatnclud', 
-        'formHash':'q7x3p3', 
-        'autoResize':true,
-        'height':'800'});
-        q7x3p3.display();
-      </script>
-    </div>
     
   </div> <!-- #container -->
   
