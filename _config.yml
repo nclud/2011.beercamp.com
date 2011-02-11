@@ -338,6 +338,30 @@ teams:
       - name: Jen Hyde
       - name: Bruce Wayne
 
+  - name: UserVoice
+    players:
+      - name: Evan Hamilton
+        twitter: evanhamilton
+      - name: Daniel Kan
+        twitter: danielkan
+      - name: Mark Martin
+        twitter: assplecake
+      - name: Scott Rutherford
+      - name: Jonathan Novak
+
+  - name: Ze Germans
+    players:
+      - name: Martijn van Erp
+        twitter: martijnvanerp
+      - name: Wietse Hage
+        twitter: wietsehage
+      - name: Johan Kuijt
+        twitter: johankuijt
+      - name: Joris Verbogt
+        twitter: TWITTER4
+      - name: Peter van Grieken
+        twitter: TWITTER5
+
   # - name: TEAMNAME
   #   players:
   #     - name: PLAYER1
