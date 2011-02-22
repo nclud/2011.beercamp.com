@@ -89,6 +89,7 @@ Beercamper.prototype.scroll = function( event ) {
     if ( this.currentLevel < 5 ) {
       this.$nav.children().eq( this.currentLevel ).addClass('current');
     }
+    this.previousLevel = this.currentLevel;
   }
   
 };
