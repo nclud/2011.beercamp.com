@@ -1,0 +1,91 @@
+---
+
+layout: colophon
+title: BeerCamp 2011 Colophon
+
+---
+
+Follow along &rarr; [2011.beercamp.com/colophon](http://2011.beercamp.com/colophon)
+
+## About BeerCamp
+
++ Fun-time party event at SXSW
++ Primary audience is web folk
++ Primary goal is just to get the word out
+
+## The idea
+
+1. Use CSS 3D transforms
+2. Most browsers won't support this. Fall back to faux-3d transforms using 2D scale transforms
+
+<div id="idea-examples" class="view1">
+  <figure class="zoom">
+    <h3>Zoom</h3>
+    <ul>
+      <li class="section1">Section 1</li>
+      <li class="section2">Section 2</li>
+      <li class="section3">Section 3</li>
+    </ul>
+    <div class="frame"></div>
+  </figure>
+
+  <figure class="three-d">
+    <h3>3D</h3>
+    <ul>
+      <li class="section1">Section 1</li>
+      <li class="section2">Section 2</li>
+      <li class="section3">Section 3</li>
+    </ul>
+    <div class="frame"></div>
+  </figure>
+  <nav>
+    <button>Section 1</button>
+    <button>Section 2</button>
+    <button>Section 3</button>
+  </nav>
+  
+</div>
+
+## How the scale transforms work
+
++ Apply scale to each section.
++ transform value = 1 / ( scale factor ^ ( level - 1 ) )
+
+{% highlight css %}
+// level 2 -> scale = 1 / ( 3 ^ 1 )
+.faux3d #featuring {
+  transform: scale(0.3333);
+}
+
+// level 3 -> scale = 1 / ( 3 ^ 2 )
+.faux3d #sponsorz {
+  transform: scale(0.1111);
+}
+
+{% endhighlight %}
+
+
+
+this is my content
+
+    Here is some code
+    
+I want a link [here](#)
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+## this is an h2 
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+### this is an h3
+
++ Lorem ipsum dolor sit amet, 
++ consectetur adipisicing elit, 
++ sed do eiusmod tempor incididunt 
++ ut labore et dolore magna aliqua.
+
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

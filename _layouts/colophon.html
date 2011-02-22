@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ page.title }}</title>
+
+  <style media="screen">
+    html, body, div, span, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+    small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    
+    html { overflow-y: scroll; }
+    
+    body {
+      font: 14px/1.6 sans-serif; *font-size:small; 
+      background: #222;
+      padding: 10px;
+      max-width: 748px;
+      margin: 0 auto;
+    } 
+    
+    ul, ol { margin-left: 2em; }
+    ol { list-style-type: decimal; }
+    
+    a, a:active, a:visited { color: #09F; border-bottom: 1px solid; text-decoration: none; }
+    a:hover { color: #DD0; }
+    
+    body, select, input, textarea {
+      color: white;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+    }
+
+    h1, h2, h3, p, ol, ul, pre {
+      margin-bottom: 0.8em;
+    }
+    
+    pre, code {
+      font-family: Monaco, courier, monospace;
+      background: black;
+      color: white;
+    }
+    
+    p code { padding: 0.1em; }
+    
+    pre {
+      padding: 1.0em;
+    }
+    
+    h1 { font-size: 2.6em; }
+    h2 { font-size: 2.0em; }
+    h3 { font-size: 1.6em; }
+    
+    h1, h2, h3 { 
+      font-family: 'Helvetica Neue', arial, sans-serif;
+      font-weight: bold;
+      color: #FFD;
+      margin-bottom: 10px;
+    }
+    
+    h2 {
+      margin-top: 1.0em;
+      border-top: 1px solid #444;
+      padding-top: 0.5em;
+    }
+    
+    /*** Idea Example ***/
+    
+    #idea-examples {
+      padding: 10px;
+      border: 1px solid #444;
+      overflow: hidden;
+    }
+    
+    #idea-examples figure {
+      display: inline-block;
+      width: 210px;
+      height: 140px;
+      border: 2px solid white;
+      margin: 100px 70px;
+      position: relative;
+      -webkit-transform: skewY(-30deg) scaleX(0.85);
+         -moz-transform: skewY(-30deg) scaleX(0.85);
+          -ms-transform: skewY(-30deg) scaleX(0.85);
+           -o-transform: skewY(-30deg) scaleX(0.85);
+              transform: skewY(-30deg) scaleX(0.85);
+    }
+    
+    #idea-examples ul {
+      list-style: none;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      -webkit-transition: -webkit-transform 1s;
+         -moz-transition:    -moz-transform 1s;
+           -o-transition:      -o-transform 1s;
+              transition:         transform 1s;
+    }
+    
+    #idea-examples li {
+      width: 206px;
+      height: 136px;
+      position: absolute;
+      border: 2px solid white;
+      font-size: 28px;
+      text-align: center;
+    }
+    
+    #idea-examples .section1 { background: red; }
+    #idea-examples .section2 { background: blue; }
+    #idea-examples .section3 { background: #0D0; }
+    
+    #idea-examples .frame {
+      width: 100%;
+      height: 100%;
+      border: 5px dotted white;
+      position: absolute;
+      left: -5px;
+      top: -5px;
+    }
+    
+    #idea-examples h3 {
+      position: absolute;
+      text-align: center;
+      top: -60px;;
+      width: 100%;
+      z-index: 20;
+      font-size: 30px;
+      background: hsla( 0, 0%, 100%, 0.9 );
+      color: black;
+    }
+    
+    #idea-examples .zoom {
+/*      z-index: 10;*/
+    }
+    
+    #idea-examples .three-d {
+    }
+    
+    #idea-examples nav {
+      position: relative;
+      z-index: 100;
+    }
+    
+    /* Zoom */
+    
+    /* scale = 1 / ( 3^1 ) */
+    #idea-examples .zoom .section2 {
+      -webkit-transform: scale(0.333);
+         -moz-transform: scale(0.333);
+          -ms-transform: scale(0.333);
+           -o-transform: scale(0.333);
+              transform: scale(0.333);
+    }
+    
+    
+    /* scale = 1 / ( 3^2 ) */
+    #idea-examples .zoom .section3 {
+      -webkit-transform: scale(0.111);
+         -moz-transform: scale(0.111);
+          -ms-transform: scale(0.111);
+           -o-transform: scale(0.111);
+              transform: scale(0.111);
+    }
+    
+    /* scale = 3^1 */
+    #idea-examples.view2 .zoom ul {
+      -webkit-transform: scale(3);
+         -moz-transform: scale(3);
+          -ms-transform: scale(3);
+           -o-transform: scale(3);
+              transform: scale(3);
+    }
+    
+    /* scale = 3^2 */
+    #idea-examples.view3 .zoom ul {
+      -webkit-transform: scale(9);
+         -moz-transform: scale(9);
+          -ms-transform: scale(9);
+           -o-transform: scale(9);
+              transform: scale(9);
+    }
+    
+    /* Three d */
+    
+    #idea-examples .three-d .section1 { z-index: 5; }
+    
+    #idea-examples .three-d .section2 {
+      z-index: 4;
+      -webkit-transform: translate(-100px,-100px);
+         -moz-transform: translate(-100px,-100px);
+          -ms-transform: translate(-100px,-100px);
+           -o-transform: translate(-100px,-100px);
+              transform: translate(-100px,-100px);
+    }
+    
+    #idea-examples .three-d .section3 {
+      z-index: 3;
+      -webkit-transform: translate(-200px,-200px);
+         -moz-transform: translate(-200px,-200px);
+          -ms-transform: translate(-200px,-200px);
+           -o-transform: translate(-200px,-200px);
+              transform: translate(-200px,-200px);
+    }
+    
+    #idea-examples.view2 .three-d ul {
+      -webkit-transform: translate(100px,100px);
+         -moz-transform: translate(100px,100px);
+          -ms-transform: translate(100px,100px);
+           -o-transform: translate(100px,100px);
+              transform: translate(100px,100px);
+    }
+    
+    #idea-examples.view3 .three-d ul {
+      -webkit-transform: translate(200px,200px);
+         -moz-transform: translate(200px,200px);
+          -ms-transform: translate(200px,200px);
+           -o-transform: translate(200px,200px);
+              transform: translate(200px,200px);
+    }
+    
+    /**** Pygments ****/
+
+    code .s1,
+    code .s { color: #78BD55; } /* string */
+    code .mi, /* integer */
+    code .cp, /* doctype */
+    code .kc { color: #5298D4; } /*boolean*/
+    code .k { color: #E39B79; } /* keyword */
+    code .kd, /* storage */
+    code .na { color: #A9D866; } /* markup attribute */
+    code .p  { color: #EDB; } /* punctuation */
+    code .o  { color: #F63; }   /* operator */
+    code .nb { color: #AA97AC;} /* support */
+
+    /* comment */
+    code .c,
+    code .c1 { color: #666; font-style: italic; }
+
+    code .nt { color: #A0C8FC; } /* Markup open tag */
+
+    code .nf { color: #9EA8B8; } /* css id */
+    code .nc { color: #A78352; }  /* CSS class */
+    code .m  { color: #DE8E50; } /* CSS value */
+    code .nd { color: #9FAD7E; } /* CSS pseudo selector */
+    
+  </style>
+
+</head>
+<body>
+
+  <h1>{{ page.title }}</h1>
+  
+  {{ content }}
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
+  <script>
+    $(function(){
+      var $ideaExamples = $('#idea-examples'),
+          ideaExamplesClass = 'view1';
+      
+      $ideaExamples.find('button').click(function(){
+        var newClass = 'view' + ( $(this).index() + 1 );
+        $ideaExamples.removeClass( ideaExamplesClass ).addClass( newClass );
+        ideaExamplesClass = newClass;
+      })
+    });
+  </script>
+
+</body>
+</html>
