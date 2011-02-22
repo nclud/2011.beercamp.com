@@ -110,9 +110,9 @@ Beercamper.prototype.click = function( event ) {
   // turn on transitions and add event listeners for its end
   if ( Modernizr.csstransitions ) {
     this.$content.addClass('transitions-on');
-    this.content.addEventListener( 'webkitTransitionEnd', this, false );
-    this.content.addEventListener( 'oTransitionEnd', this, false );
-    this.content.addEventListener( 'transitionend', this, false );
+    this.$content[0].addEventListener( 'webkitTransitionEnd', this, false );
+    this.$content[0].addEventListener( 'oTransitionEnd', this, false );
+    this.$content[0].addEventListener( 'transitionend', this, false );
   }
 
   // set scrollbar position
@@ -144,23 +144,23 @@ Beercamper.prototype.oTransitionEnd = function( event ) {
 // disables transition after nav click
 Beercamper.prototype.transitionEnded = function( event ) {
   this.$content.removeClass('transitions-on');
-  this.content.removeEventListener( 'webkitTransitionEnd', this, false );
-  this.content.removeEventListener( 'transitionend', this, false );
-  this.content.removeEventListener( 'oTransitionEnd', this, false );
+  this.$content[0].removeEventListener( 'webkitTransitionEnd', this, false );
+  this.$content[0].removeEventListener( 'transitionend', this, false );
+  this.$content[0].removeEventListener( 'oTransitionEnd', this, false );
 };
 
 
 // BeerCamp '11 Global object
+// initialize Beercamper
 var BCXI = new Beercamper();
 
+// check if browser is iOS -> iPhone / iPad / iPod Touch
 BCXI.isIOS = !!('createTouch' in document);
-
 
 
 $(function(){
   
   BCXI.$content = $('#content');
-  BCXI.content = document.getElementById('content');
   BCXI.$nav = $('#nav');
   
   var $body = $('body'),
