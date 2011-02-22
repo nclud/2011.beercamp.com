@@ -698,30 +698,19 @@ a:hover {
   left: 330px;
   margin: 0 10px;
   background: white;
-  height: 50px;
-}
-
-#featuring .links p {
-  height: 24px;
-  line-height: 24px;
+  height: 40px;
+  padding: 5px 0;
   font-family: 'Hero', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 21px;
-  background: white;
+  font-size: 16px;
   text-align: center;
 }
 
-#featuring .links p a {
-  display: block;
-  color: #DD0;
+#featuring .links a {
+  color: #B20;
 }
 
-#featuring .links p a:hover {
-  background: #B20;
-}
-
-#featuring .links p.twitter {
-  border-bottom: 3px solid #DD0;
-  
+#featuring .links a:hover {
+  background: #DD0;
 }
 
 #featuring .blurb {
