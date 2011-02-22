@@ -6,7 +6,8 @@
 
 // BeerCamp '11 Global constructor
 // don't necessarily need the constructor, but I like using the 'this' keyword
-var Beercamper = function() {
+function Beercamper() {
+  // properties
   this.scrolled = 0;
   this.currentLevel = 0;
   this.levels = 7;
@@ -19,17 +20,20 @@ var Beercamper = function() {
     '#teams' : 4
   };
   
+  // cache some jQuery objects
   this.$window = $(window);
   this.$document = $(document);
   
+  // which method should be used to return CSS transform styles
   this.getScrollTransform = Modernizr.csstransforms3d ? 
     this.getScroll3DTransform : this.getScroll2DTransform;
   
+  // bind constructor to window.scroll event
   if ( Modernizr.csstransforms ) {
     window.addEventListener( 'scroll', this, false);
   }
   
-};
+}
 
 // enables constructor to be used within event listener
 // like obj.addEventListener( eventName, this, false )
