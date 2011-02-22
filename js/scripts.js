@@ -2,6 +2,8 @@
 // by nclud
 
 
+(function( $, Modernizr){
+
 // BeerCamp '11 Global constructor
 // don't necessarily need the constructor, but I like using the 'this' keyword
 var Beercamper = function() {
@@ -39,7 +41,7 @@ Beercamper.prototype.handleEvent = function( event ) {
 
 Beercamper.prototype.getScroll2DTransform = function( scroll ) {
   // 2D scale is exponential
-  var scale = Math.pow( 3, scroll * (this.levels - 1) );
+  var scale = Math.pow( 3, scroll * (this.levels - 1) ),
       prop = 'scale(' + scale + ')',
       style = {
         WebkitTransform : prop,
@@ -156,9 +158,9 @@ $(function(){
   BCXI.content = document.getElementById('content');
   BCXI.$nav = $('#nav');
   
-  $body = $('body');
-  
-  var iOSclass = BCXI.isIOS ? 'ios' : 'no-ios';
+  var $body = $('body'),
+      iOSclass = BCXI.isIOS ? 'ios' : 'no-ios';
+
   $body.addClass( iOSclass );
 
   if ( Modernizr.csstransforms ) {
@@ -191,3 +193,6 @@ $(function(){
   });
   
 });
+
+
+})( jQuery, window.Modernizr );
