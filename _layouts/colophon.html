@@ -31,11 +31,13 @@
     
     body {
       font: 14px/1.6 sans-serif; *font-size:small; 
-      background: #222;
+      background: #223;
       padding: 10px;
       max-width: 748px;
       margin: 0 auto;
     } 
+    
+    em, i { font-style: italic; }
     
     ul, ol { margin-left: 2em; }
     ol { list-style-type: decimal; }
@@ -48,7 +50,7 @@
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
     }
 
-    h1, h2, h3, p, ol, ul, pre {
+    h1, h2, h3, p, ol, ul, pre, blockquote {
       margin-bottom: 0.8em;
     }
     
@@ -56,6 +58,7 @@
       font-family: Monaco, courier, monospace;
       background: black;
       color: white;
+      font-size: 13px;
     }
     
     p code { padding: 0.1em; }
@@ -71,14 +74,26 @@
     h1, h2, h3 { 
       font-family: 'Helvetica Neue', arial, sans-serif;
       font-weight: bold;
-      color: #FFD;
+      
       margin-bottom: 10px;
     }
+    
+    h1, h2 { color: #FFA;  }
     
     h2 {
       margin-top: 1.0em;
       border-top: 1px solid #444;
       padding-top: 0.5em;
+    }
+    
+    blockquote {
+      padding: 0.8em;
+      font-style: italic;
+      background: hsla( 0, 0%, 100%, 0.1 );
+    }
+    
+    .preso h2 {
+      margin-top: 20.0em;
     }
     
     /*** Idea Example ***/
@@ -276,12 +291,19 @@
   <script>
     $(function(){
       var $ideaExamples = $('#idea-examples'),
-          ideaExamplesClass = 'view1';
+          ideaExamplesClass = 'view1',
+          $body = $('body');
       
       $ideaExamples.find('button').click(function(){
         var newClass = 'view' + ( $(this).index() + 1 );
         $ideaExamples.removeClass( ideaExamplesClass ).addClass( newClass );
         ideaExamplesClass = newClass;
+      });
+      
+      
+      
+      $('#toggle-presentation').click(function(){
+        $body.toggleClass('preso');
       })
     });
   </script>

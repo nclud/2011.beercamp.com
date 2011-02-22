@@ -7,6 +7,8 @@ title: BeerCamp 2011 Colophon
 
 Follow along &rarr; [2011.beercamp.com/colophon](http://2011.beercamp.com/colophon)
 
+<button id="toggle-presentation">Toggle presentation mode</button>
+
 ## About BeerCamp
 
 + Fun-time party event at SXSW
@@ -46,46 +48,145 @@ Follow along &rarr; [2011.beercamp.com/colophon](http://2011.beercamp.com/coloph
   
 </div>
 
-## How the scale transforms work
+## How the scale transforms work for zoom
 
 + Apply scale to each section.
-+ transform value = 1 / ( scale factor ^ ( level - 1 ) )
++ transform value = 1 / ( scaleFactor ^ ( level - 1 ) )
 
 {% highlight css %}
-// level 2 -> scale = 1 / ( 3 ^ 1 )
-.faux3d #featuring {
-  transform: scale(0.3333);
+
+/* level 2 -> scale = 1 / ( 3^1 ) = 1/3 */
+#idea-examples .zoom .section2 {
+  -webkit-transform: scale(0.333);
+     -moz-transform: scale(0.333);
+      -ms-transform: scale(0.333);
+       -o-transform: scale(0.333);
+          transform: scale(0.333);
 }
 
-// level 3 -> scale = 1 / ( 3 ^ 2 )
-.faux3d #sponsorz {
-  transform: scale(0.1111);
+/* level 3 -> scale = 1 / ( 3^2 ) = 1/9 */
+#idea-examples .zoom .section3 {
+  -webkit-transform: scale(0.111);
+     -moz-transform: scale(0.111);
+      -ms-transform: scale(0.111);
+       -o-transform: scale(0.111);
+          transform: scale(0.111);
 }
 
 {% endhighlight %}
 
++ Then for each position, apply reverse scale to the container
++ transform value = scaleFactor ^ ( level - 1 )
+
+{% highlight css %}
+
+/* scale = 3^1 = 3 */
+#idea-examples.view2 .zoom ul {
+  -webkit-transform: scale(3);
+     -moz-transform: scale(3);
+      -ms-transform: scale(3);
+       -o-transform: scale(3);
+          transform: scale(3);
+}
+
+/* scale = 3^2 = 9 */
+#idea-examples.view3 .zoom ul {
+  -webkit-transform: scale(9);
+     -moz-transform: scale(9);
+      -ms-transform: scale(9);
+       -o-transform: scale(9);
+          transform: scale(9);
+}
+
+{% endhighlight %}
+
+## Version 1: It works but...
+
++ Looks okay (sort of) in Safari
++ Terribly slow in other browsers
++ Had to remove lots of visual elements for Chrome / Firefox
++ Navigation relies on buttons
++ In general, not fun
+
+## Finding delight
+
+Design Nobility Pyramid by [Frank Chimero](http://frankchimero.com)
+
+[![Designspeaks Portland by frank-chimero, on Flickr](http://farm4.static.flickr.com/3319/4604592754_f711245c51.jpg)](http://www.flickr.com/photos/frank-sparrow/4604592754/)
+
+[nikebetterworld.com](http://nikebetterworld.com) by Ian Coyle & Duane King
+
++ Scrolling is immediately rewarding
++ Gets you _involved_
++ Makes you want to play around with the site
+
+## Now then...
+
++ Delight comes from interaction
++ Interaction -> front end developer's wheelhouse
+
+## Implementing scroll CSS
+
+See [css/style.css](https://github.com/nclud/2011.beercamp.com/blob/gh-pages/css/style.css)
+
+All content is `position: fixed`.
+
+{% highlight css %}
+
+.csstransforms #wrap { position: fixed; }
+
+{% endhighlight %}
+
+Transparent proxy element is the only thing that scrolls.
+
+{% highlight css %}
+
+.csstransforms.no-touch #scroll-proxy { height: 5400px; }
+
+{% endhighlight %}
+
+## Starting JavaScript
+
+See [js/scripts.js](https://github.com/nclud/2011.beercamp.com/blob/gh-pages/js/scripts.js)
+
+Use constructor
+
+{% highlight javascript %}
+
+function Beercamper() {
+  // properties
+  this.scrolled = 0;
+  // etc...
+  
+  // which method should be used to return CSS transform styles
+  this.getScrollTransform = Modernizr.csstransforms3d ? 
+    this.getScroll3DTransform : this.getScroll2DTransform;
+  
+  // bind constructor to window.scroll event
+  if ( Modernizr.csstransforms ) {
+    window.addEventListener( 'scroll', this, false);
+  }
+  
+}
+
+// enables constructor to be used within event listener
+// like obj.addEventListener( eventName, this, false )
+Beercamper.prototype.handleEvent = function( event ) {
+  if ( this[event.type] ) {
+    this[event.type](event);
+  }
+};
+
+{% endhighlight %}
+
+## handleEvent
+
++ Binding event _without_ jQuery
++ See [Ajaxian: An alternative way to addEventListener](http://ajaxian.com/archives/an-alternative-way-to-addeventlistener)
++ Using [EventListener](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener)
+
+> Rather than bind inline or add anonymous functions to make our object call context preserved, we can simply add an _handleEvent_ method to whatever object and pass it as EventListener.
 
 
-this is my content
-
-    Here is some code
-    
-I want a link [here](#)
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-## this is an h2 
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-### this is an h3
-
-+ Lorem ipsum dolor sit amet, 
-+ consectetur adipisicing elit, 
-+ sed do eiusmod tempor incididunt 
-+ ut labore et dolore magna aliqua.
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
