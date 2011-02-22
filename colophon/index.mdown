@@ -208,7 +208,7 @@ Beercamper.prototype.handleEvent = function( event ) {
 
 > Rather than bind inline or add anonymous functions to make our object call context preserved, we can simply add an _handleEvent_ method to whatever object and pass it as EventListener.
 
-## scrollin' scriptz
+## Scrollin' on dubs
 
 1. Any scrolling now triggers `Beercamper.scroll`
 2. Scroll position `this.scrolled` is calculated as decimal (0 to 1)
@@ -279,7 +279,7 @@ Beercamper.prototype.getScroll3DTransform = function( scroll ) {
 {% endhighlight %}
 
 
-## Scrollin' on Dubs
+## Initalize / doc ready
 
 All that's left is to initialize the constructor.
 
@@ -378,6 +378,19 @@ Beercamper.prototype.click = function( event ) {
   event.preventDefault();
   
 };
+
+{% endhighlight %}
+
+Related CSS
+
+{% highlight css %}
+
+.csstransforms #content.transitions-on {
+  -webkit-transition: -webkit-transform 1s;
+     -moz-transition:    -moz-transform 1s;
+       -o-transition:      -o-transform 1s;
+          transition:         transform 1s;
+}
 
 {% endhighlight %}
 
