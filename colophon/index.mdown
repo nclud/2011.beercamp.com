@@ -7,6 +7,10 @@ title: BeerCamp 2011 Colophon
 
 ### Follow along &rarr; [2011.beercamp.com/colophon](http://2011.beercamp.com/colophon)
 
+### Source available on GitHub &rarr; [github.com/nclud/2011.beercamp.com](http://github.com/nclud/2011.beercamp.com)
+
+    git clone https://github.com/nclud/2011.beercamp.com.git
+
 <button id="toggle-presentation">Toggle presentation mode</button>
 
 # {{ page.title }}
@@ -29,25 +33,29 @@ title: BeerCamp 2011 Colophon
 + Most browsers won't support this. Fall back to faux-3d transforms using 2D scale transforms
 
 <div id="idea-examples" class="view1">
-  <figure class="zoom">
-    <h3>Zoom</h3>
-    <ul>
-      <li class="section1">Section 1</li>
-      <li class="section2">Section 2</li>
-      <li class="section3">Section 3</li>
-    </ul>
-    <div class="frame"></div>
-  </figure>
+  <div class="pane">
+    <figure class="zoom">
+      <h3>Zoom</h3>
+      <ul>
+        <li class="section1">Section 1</li>
+        <li class="section2">Section 2</li>
+        <li class="section3">Section 3</li>
+      </ul>
+      <div class="frame"> </div>
+    </figure>
+  </div>
 
-  <figure class="three-d">
-    <h3>3D</h3>
-    <ul>
-      <li class="section1">Section 1</li>
-      <li class="section2">Section 2</li>
-      <li class="section3">Section 3</li>
-    </ul>
-    <div class="frame"></div>
-  </figure>
+  <div class="pane">
+    <figure class="three-d">
+      <h3>3D</h3>
+      <ul>
+        <li class="section1">Section 1</li>
+        <li class="section2">Section 2</li>
+        <li class="section3">Section 3</li>
+      </ul>
+      <div class="frame"> </div>
+    </figure>
+  </div>
   <nav>
     <button>Section 1</button>
     <button>Section 2</button>
@@ -200,7 +208,7 @@ Beercamper.prototype.handleEvent = function( event ) {
 
 {% endhighlight %}
 
-## handleEvent
+### handleEvent
 
 + Binding event _without_ jQuery
 + See [Ajaxian: An alternative way to addEventListener](http://ajaxian.com/archives/an-alternative-way-to-addeventlistener)
