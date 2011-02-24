@@ -9,6 +9,8 @@ BeerCamp at SXSW 2011
 
 ## Site
 
+Read about the site in the colophon -> http://2011.beercamp.com/colophon
+
 Built with [Jekyll](http://jekyllrb.com)
 
 Served via [GitHub Pages](http://pages.github.com)
