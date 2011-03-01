@@ -230,6 +230,9 @@ a:hover {
   font-weight: normal;
 }
 
+::-moz-selection{ background: #222233; color:#DD0; text-shadow: none; }
+::selection { background:#222233; color:#DD0; text-shadow: none; }
+
 /***************** No Transforms *****************/
 
 .no-csstransforms #container {
