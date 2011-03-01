@@ -654,6 +654,9 @@ a:hover {
 #featuring .music p .artist { font-size: 42px; }
 #featuring .music p .link { font-size: 20px; }
 
+#featuring .music p .richard-gear .artist { font-size: 34px; }
+#featuring .music p .richard-gear .link { font-size: 19px; }
+
 #featuring .links {
   position: absolute;
   bottom: 0px;
