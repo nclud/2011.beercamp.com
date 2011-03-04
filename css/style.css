@@ -235,12 +235,14 @@ a:hover {
 
 /***************** No Transforms *****************/
 
-.no-csstransforms #container {
+.no-csstransforms #container,
+.no-js #container {
   margin-top: 60px;
   position: relative;
 }
 
-.no-csstransforms #content section {
+.no-csstransforms #content section,
+.no-js #content section {
   width: 100%;
   height: 540px;
   margin-bottom: 100px;
