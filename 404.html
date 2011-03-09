@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>404 - Page not found - BeerCamp</title>
+
+  <meta name = "viewport" content = "width = 1000">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+  <title>BeerCamp at SXSW 2011</title>
+  
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <style>
+    .csstransforms3d body { overflow: hidden; }
+  
+    .wrap {
+      width: 500px;
+      margin: 2% auto;
+      position: relative;
+      height: 500px;
+      -webkit-perspective: 1000;
+    }
+  
+    h1 {
+      font-family: 'Hero';
+      font-size: 200px;
+      position: absolute;
+      text-align: center;
+      line-height: 166px;
+      width: 100%;
+      height: 100%;
+      text-transform: uppercase;
+    }
+    
+    h1.beta, h1.gamma { display: none; }
+    
+    .csstransforms3d h1 {
+      display: block;
+     -webkit-animation: zoom404 6s infinite linear;
+     -webkit-animation-fill-mode: both;
+    }
+    
+    .csstransforms3d h1.beta  { -webkit-animation-delay: 2s; }
+    .csstransforms3d h1.gamma { -webkit-animation-delay: 4s; }
+    
+    @-webkit-keyframes zoom404 {
+      0%   { -webkit-transform: translate3d( 0, 0, -9000px) rotate(  0deg); opacity: 0; }
+      50%  { -webkit-transform: translate3d( 0, 0,  -4000px) rotate(  -180deg); opacity: 1; }
+      100% { -webkit-transform: translate3d( 0, 0,  1000px) rotate(-360deg); opacity: 1; }
+    }
+
+  </style>
+
+  <script src="js/modernizr.js"></script>
+
+</head>
+<body>
+
+  <div class="wrap">
+    <h1 class="alpha">four oh four</h1>
+    <h1 class="beta">page no more</h1>
+    <h1 class="gamma">fail ga- lore</h1>
+  </div>
+
+</body>
+</html>
