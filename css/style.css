@@ -262,6 +262,7 @@ a:hover {
 .csstransforms #content.transitions-on {
   -webkit-transition: -webkit-transform 1s;
      -moz-transition:    -moz-transform 1s;
+      -ms-transition:     -ms-transform 1s;
        -o-transition:      -o-transform 1s;
           transition:         transform 1s;
 }
@@ -323,37 +324,68 @@ a:hover {
 /***************** True 3d  *****************/
 
 .csstransforms3d #environment {
-  -webkit-perspective: 500;
-  -webkit-perspective-origin: center 450px;
   width: 100%;
   height: 540px;
+  -webkit-perspective: 500;
+     -moz-perspective: 500;
+      -ms-perspective: 500;
+       -o-perspective: 500;
+          perspective: 500;
+  -webkit-perspective-origin: center 450px;
+     -moz-perspective-origin: center 450px;
+      -ms-perspective-origin: center 450px;
+       -o-perspective-origin: center 450px;
+          perspective-origin: center 450px;
 }
 
 .csstransforms3d #content {
   -webkit-transform-style: preserve-3d;
-/*  -webkit-transform: rotateY(10deg);*/
+     -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .csstransforms3d #featuring {
-  -webkit-transform: translate3d( 0, 0, -1000px ) ;
+  -webkit-transform: translate3d( 0, 0, -1000px );
+     -moz-transform: translate3d( 0, 0, -1000px );
+      -ms-transform: translate3d( 0, 0, -1000px );
+       -o-transform: translate3d( 0, 0, -1000px );
+          transform: translate3d( 0, 0, -1000px );
 }
 
 
 .csstransforms3d #sponsorz {
   -webkit-transform: translate3d( 0, 0, -2000px );
+     -moz-transform: translate3d( 0, 0, -2000px );
+      -ms-transform: translate3d( 0, 0, -2000px );
+       -o-transform: translate3d( 0, 0, -2000px );
+          transform: translate3d( 0, 0, -2000px );
 }
 
 
 .csstransforms3d #flip-cup {
   -webkit-transform: translate3d( 0, 0, -3000px );
+     -moz-transform: translate3d( 0, 0, -3000px );
+      -ms-transform: translate3d( 0, 0, -3000px );
+       -o-transform: translate3d( 0, 0, -3000px );
+          transform: translate3d( 0, 0, -3000px );
 }
 
 .csstransforms3d #teams {
   -webkit-transform: translate3d( 0, 0, -4000px );
+     -moz-transform: translate3d( 0, 0, -4000px );
+      -ms-transform: translate3d( 0, 0, -4000px );
+       -o-transform: translate3d( 0, 0, -4000px );
+          transform: translate3d( 0, 0, -4000px );
 }
 
 .csstransforms3d #limbo {
   -webkit-transform: translate3d( 0, 0, -6000px );
+     -moz-transform: translate3d( 0, 0, -6000px );
+      -ms-transform: translate3d( 0, 0, -6000px );
+       -o-transform: translate3d( 0, 0, -6000px );
+          transform: translate3d( 0, 0, -6000px );
 }
 
 /***************** Nav  *****************/
@@ -376,7 +408,6 @@ a:hover {
   text-align: center;
   font-size: 15px;
   text-transform: uppercase;
-/*  font-family: 'Hero', 'Helvetica Neue', Arial, sans-serif;*/
   letter-spacing: 0.15em;
   line-height: 1.4em;
 }
@@ -401,7 +432,6 @@ a:hover {
 }
 
 #content #nav { display: none; }
-/*#container > #nav { display: none; }*/
 
 .no-csstransforms #nav {
   position: fixed;
@@ -1170,10 +1200,12 @@ a:hover {
           transform: scale(0.001);
   -webkit-transition-duration: 0.5s;
      -moz-transition-duration: 0.5s;
+      -ms-transition-duration: 0.5s;
        -o-transition-duration: 0.5s;
           transition-duration: 0.5s;
   -webkit-transition-property: -webkit-transform, opacity;
      -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
        -o-transition-property:      -o-transform, opacity;
           transition-property:         transform, opacity;
 }
@@ -1218,6 +1250,7 @@ a:hover {
 body {
   -webkit-transition: background-color 0.5s;
      -moz-transition: background-color 0.5s;
+      -ms-transition: background-color 0.5s;
        -o-transition: background-color 0.5s;
           transition: background-color 0.5s;
 }
