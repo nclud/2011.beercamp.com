@@ -1,9 +1,9 @@
 // BeerCamp at SXSW 2011
 // by nclud
 
-/*jshint undef: true, curly: true, asi: false */
+/*jshint undef: true, curly: true, asi: false, browser: true */
 
-(function( window, $, Modernizr ){
+(function( window, document, $, Modernizr ){
 
 // check if browser is iOS -> iPhone / iPad / iPod Touch
 var isIOS = !!('createTouch' in document);
@@ -199,4 +199,4 @@ $(function(){
 });
 
 
-})( window, window.jQuery, window.Modernizr );
+})( window, window.document, window.jQuery, window.Modernizr );
