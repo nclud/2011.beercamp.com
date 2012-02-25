@@ -1,8 +1,14 @@
 // BeerCamp at SXSW 2011
 // by nclud
 
+/*jshint undef: true, curly: true, asi: false */
 
-(function( $, Modernizr){
+(function( window, $, Modernizr ){
+
+// check if browser is iOS -> iPhone / iPad / iPod Touch
+var isIOS = !!('createTouch' in document);
+
+var transformProp = Modernizr.prefixed('transform');
 
 // BeerCamp '11 Global constructor
 // don't necessarily need the constructor, but I like using the 'this' keyword
@@ -45,15 +51,8 @@ Beercamper.prototype.handleEvent = function( event ) {
 
 Beercamper.prototype.getScroll2DTransform = function( scroll ) {
   // 2D scale is exponential
-  var scale = Math.pow( 3, scroll * (this.levels - 1) ),
-      prop = 'scale(' + scale + ')',
-      style = {
-        WebkitTransform : prop,
-        MozTransform : prop,
-        OTransform : prop,
-        transform : prop
-      };
-  return style;
+  var scale = Math.pow( 3, scroll * (this.levels - 1) );
+  return 'scale(' + scale + ')';
 };
 
 Beercamper.prototype.getScroll3DTransform = function( scroll ) {
@@ -68,10 +67,7 @@ Beercamper.prototype.getScroll3DTransform = function( scroll ) {
     z = Math.round( z / this.distance3d ) * this.distance3d;
   }
   
-  style = {
-    WebkitTransform : 'translate3d( 0, 0, ' + z + 'px )'
-  };
-  return style;
+  return 'translate3d( 0, 0, ' + z + 'px )';
 };
 
 Beercamper.prototype.scroll = function( event ) {
@@ -97,7 +93,14 @@ Beercamper.prototype.scroll = function( event ) {
 // where the magic happens
 // applies transform to content from position of scroll
 Beercamper.prototype.transformScroll = function( scroll ) {
-  this.$content.css( this.getScrollTransform( scroll ) );
+  // bail out if content is not there yet
+  if ( !this.$content ) {
+    return;
+  }
+
+  var style = {};
+  style[ transformProp ] = this.getScrollTransform( scroll );
+  this.$content.css( style );
 };
 
 // handle click events
@@ -120,7 +123,7 @@ Beercamper.prototype.click = function( event ) {
   this.$window.scrollTop( scroll * ( this.$document.height() - this.$window.height() ) );
 
   // iOS doesn't have scrollbar, so we have to manually trigger it
-  if ( this.isIOS ) {
+  if ( isIOS ) {
     this.transformScroll( scroll );
   }
 
@@ -150,21 +153,17 @@ Beercamper.prototype.transitionEnded = function( event ) {
 };
 
 
-// BeerCamp '11 Global object
-// initialize Beercamper
-var BCXI = new Beercamper();
-
-// check if browser is iOS -> iPhone / iPad / iPod Touch
-BCXI.isIOS = !!('createTouch' in document);
-
-
 $(function(){
-  
+
+  // BeerCamp '11 Global object
+  // initialize Beercamper
+  var BCXI = new Beercamper();
+
   BCXI.$content = $('#content');
   BCXI.$nav = $('#nav');
-  
+
   var $body = $('body'),
-      iOSclass = BCXI.isIOS ? 'ios' : 'no-ios';
+      iOSclass = isIOS ? 'ios' : 'no-ios';
 
   $body.addClass( iOSclass );
 
@@ -200,4 +199,4 @@ $(function(){
 });
 
 
-})( jQuery, window.Modernizr );
+})( window, window.jQuery, window.Modernizr );
