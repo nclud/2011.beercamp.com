@@ -326,11 +326,11 @@ a:hover {
 .csstransforms3d #environment {
   width: 100%;
   height: 540px;
-  -webkit-perspective: 500;
-     -moz-perspective: 500;
-      -ms-perspective: 500;
-       -o-perspective: 500;
-          perspective: 500;
+  -webkit-perspective: 500px;
+     -moz-perspective: 500px;
+      -ms-perspective: 500px;
+       -o-perspective: 500px;
+          perspective: 500px;
   -webkit-perspective-origin: center 450px;
      -moz-perspective-origin: center 450px;
       -ms-perspective-origin: center 450px;
