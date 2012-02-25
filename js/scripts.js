@@ -1,7 +1,7 @@
 // BeerCamp at SXSW 2011
 // by nclud
 
-/*jshint undef: true, curly: true, asi: false, browser: true */
+/*jshint undef: true, curly: true, asi: false, browser: true, eqeqeq: true */
 
 (function( window, document, $, Modernizr ){
 
